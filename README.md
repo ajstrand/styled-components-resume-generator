@@ -13,20 +13,11 @@ npm install --save styled-components-resume-generator
 ## Usage
 
 ```tsx
-import * as React from 'react'
-
-import MyComponent from 'styled-components-resume-generator'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+//TODO: write me when library is done
 ```
 
 ## Acknowledgments
+
 The original design for this resume template comes from and is copyright of [isabelacmor](https://github.com/isabelacmor)
 
 ## License
