@@ -26,6 +26,9 @@ class Example extends React.Component {
 }
 ```
 
+## Acknowledgments
+The original design for this resume template comes from and is copyright of [isabelacmor](https://github.com/isabelacmor)
+
 ## License
 
 MIT © [ajstrand](https://github.com/ajstrand)

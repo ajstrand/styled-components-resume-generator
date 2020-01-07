@@ -6,18 +6,19 @@ import * as React from 'react'
 
 import styles from './styles.css'
 
-export type Props = { text: string }
+export interface Props  { text: string, onClick?:() => void }
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
+const ExampleComponent = (props:Props) => {
     const {
-      text
-    } = this.props
+      text,
+      onClick,
+    } = props
 
     return (
-      <div className={styles.test}>
+      <button className={styles.test} onClick={() => onClick && onClick()}>
         Example Component: {text}
-      </div>
+      </button>
     )
-  }
 }
+
+export default ExampleComponent
