@@ -1,5 +1,5 @@
 import React from "react";
-import ExampleComponent from "./index"
+import ExampleComponent from "../components/index"
 import { action } from "@storybook/addon-actions";
 import {  text} from '@storybook/addon-knobs';
 import { withKnobs } from '@storybook/addon-knobs/react';
@@ -19,7 +19,7 @@ export default {
 /**
  * This is a comment
  */
-export const WithText = () =>
+export const WithText = (): JSX.Element =>
 <ExampleComponent color="green"
 text={text("color", "blue")} onClick={action('clicked')}>
  </ExampleComponent>;

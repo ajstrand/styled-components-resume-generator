@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import React from "react";
-
+import PropTypes from 'prop-types';
 const accentColor = "#4aa0d5"
 export const mainColors = {
   accentColor: accentColor,
@@ -15,8 +15,12 @@ export const sizeDefinitions = {
   smallSpacing: "0.5em"
 }
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={{ mode: 'light' }}>{children}</ThemeProvider>
-);
+const Theme = ({ children }): JSX.Element => {
+  return (<ThemeProvider theme={{ mode: 'light' }}>{children}</ThemeProvider>);
+};
+
+Theme.propTypes = {
+  children: PropTypes.element
+}
 
 export default Theme
