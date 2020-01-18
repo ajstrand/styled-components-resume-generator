@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  Section,
   LeftColumn, PlainLeftColumnDateRange,
   RightColumn,
   PlainRightColumnTitle,
@@ -9,7 +8,7 @@ import {
   TwoColumnSection, ResumeBody,
   ExperienceProjectItem,
   PlainLeftColumn, PlainLeftColumnName,
-  PlainRightColumn, EducationItem
+  PlainRightColumn, EducationItem, ProjectDescListItem, ProjectDescList, Section
 } from "./ResumeBodyStyles";
 import Header, { ContactDetails, ContactDetailsAnchorTag, ContactName } from './Header';
 import SectionHeader from "./SectionHeader";
@@ -20,10 +19,6 @@ import resumeDataObj from './resumeData';
 const CreateSectionAndHeader = (props): JSX.Element => {
   const { sectionTitle, children } = props;
   const jsx = (
-    // <div className={`${sectionTitle}Section`}>
-    //   <span className="sectionHeader">{sectionTitle}</span>
-    //   {chilren}
-    // </div>
     <Section>
       <SectionHeader>{sectionTitle}</SectionHeader>
       {children}
@@ -64,9 +59,9 @@ const CreateProjectsSection = (): JSX.Element => {
           <span className="dateRange">{project.dateRange}</span>
         </LeftColumn>
         <RightColumn>
-          <ul className="projectDescription">
-            <li>{project.desc}</li>
-          </ul>
+          <ProjectDescList>
+            <ProjectDescListItem>{project.desc}</ProjectDescListItem>
+          </ProjectDescList>
         </RightColumn>
       </ExperienceProjectItem>
     );
@@ -91,9 +86,8 @@ const CreateEducationSection = (): JSX.Element => {
 
 };
 const CreateSkillsSection = (): JSX.Element => {
-  const skills = resumeDataObj.skills;
-  const skillsList = skills.map((value, index) => {
-  const nextVal =  skills[index + 1];
+  const skillsList = resumeDataObj.skills.map((value, index) => {
+  const nextVal =  resumeDataObj.skills[index + 1];
    return nextVal ? value.concat(", ") : value
   }
   );
@@ -134,14 +128,22 @@ const ResumeContent = (): JSX.Element => {
     <ResumeGridContainer>
       <CreateHeader />
       <ResumeBody>
-        <CreateSectionAndHeader sectionTitle="experience" children={<CreateExperienceSection />} />
-        <CreateSectionAndHeader sectionTitle="projects" children={<CreateProjectsSection />} />
+      <CreateSectionAndHeader sectionTitle="experience">
+      <CreateExperienceSection />
+            </CreateSectionAndHeader>
+            <CreateSectionAndHeader sectionTitle="projects">
+      <CreateProjectsSection />
+            </CreateSectionAndHeader>
         <TwoColumnSection>
           <LeftColumn>
-            <CreateSectionAndHeader sectionTitle="education" children={<CreateEducationSection />} />
+            <CreateSectionAndHeader sectionTitle="education">
+            <CreateEducationSection />
+            </CreateSectionAndHeader>
           </LeftColumn>
           <RightColumn>
-            <CreateSectionAndHeader sectionTitle="skills" children={<CreateSkillsSection />} />
+          <CreateSectionAndHeader sectionTitle="skills">
+            <CreateSkillsSection />
+            </CreateSectionAndHeader>
           </RightColumn>
         </TwoColumnSection>
       </ResumeBody>

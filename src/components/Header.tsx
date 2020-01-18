@@ -11,8 +11,12 @@ export const HeaderCommonStyles = css`
 export const BodyCommonStyles = css`
   font-weight: 500;
   font-family: "Khula", sans-serif;
+  list-style-type:none;
   font-size: 0.95em;
   color: ${mainColors.textSecondaryColor};
+  @media screen and (min-width:30em) {
+    list-style-type:circle;
+  }
 `;
 
 export const Description = styled.p`
@@ -33,7 +37,12 @@ export const ContactName = styled.span`
 
 export const ContactDetails = styled.ul`
   list-style-type: none;
-  text-align: right;
+  padding:0;
+  width:100%;
+  text-align:center;
+  @media screen and (min-width: 30em) {
+    text-align: right;
+  }
 `;
 
 export const ContactDetailsAnchorTag = styled(ContactDetails)`
@@ -43,12 +52,18 @@ export const ContactDetailsAnchorTag = styled(ContactDetails)`
 `;
 
 const Header = styled.div`
-  padding: 0 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width:100vw;
   background-color: ${mainColors.accentColor};
+  @media screen and (min-width: 30em) {
+    width:auto;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export default Header;
