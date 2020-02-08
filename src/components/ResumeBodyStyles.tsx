@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { sizeDefinitions } from "./Theme";
 import { HeaderCommonStyles, BodyCommonStyles } from "./Header";
 export const ResumeBody = styled.div`
-  padding: 20px;
+  padding: 10px;
   display: grid;
   grid-column: 1;
   grid-auto-rows: auto;
@@ -12,14 +12,14 @@ export const ResumeBody = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90%;
-  @media screen and (min-width: 30em) {
-    width: 100%;
-  }
+  flex-basis: 90vw;
 `;
-export const PlainLeftColumn = styled(Column)``;
+export const PlainLeftColumn = styled(Column)`
+  flex-basis: auto;
+`;
 
 export const PlainRightColumn = styled(Column)`
+  flex-basis: auto;
   grid-area: description;
   & > ul {
     margin: 0;
@@ -40,6 +40,7 @@ export const TwoColumnSection = styled.div`
 
 export const LeftColumn = styled(Column)`
   margin: 0;
+  flex-basis: auto;
   @media screen and (min-width: 30em) {
     flex-basis: 200px;
     flex-grow: 9999;
@@ -48,6 +49,7 @@ export const LeftColumn = styled(Column)`
 `;
 
 export const RightColumn = styled(Column)`
+  flex-basis: auto;
   @media screen and (min-width: 30em) {
     flex-basis: 100px;
     flex-grow: 1;
@@ -72,7 +74,7 @@ const ExperienceProjectSectionCommonStyles = css`
 `;
 
 export const ProjectDescList = styled.ul`
-  padding:0
+  padding:0;
 `;
 export const ProjectDescListItem = styled.li`
   list-style-type:none;
@@ -85,7 +87,7 @@ const ExperienceProjectItemCommonStyles = css`
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-  width: 100vw;
+  flex-basis: 90vw;
   @media screen and (min-width: 30em) {
     display: grid;
     grid-template-areas: "title description";

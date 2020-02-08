@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
-import { mainColors } from "./Theme";
+import { mainColors, sizeDefinitions } from "./Theme";
 
 export const HeaderCommonStyles = css`
   font-weight: 600;
   font-family: "Yantramanav", sans-serif;
-  font-size: headerPrimarySize;
+  font-size: ${sizeDefinitions.headerPrimarySize};
   color: ${mainColors.textPrimaryColor};
   text-transform: capitalize;
 `;
@@ -31,8 +31,11 @@ export const Accent = styled.span`
 
 export const ContactName = styled.span`
   ${HeaderCommonStyles}
-  font-size: 3em;
+  font-size:1em;
   color: white;
+  @media screen and (min-width: 30em) {
+    font-size: 3em;
+  }
 `;
 
 export const ContactDetails = styled.ul`
@@ -45,7 +48,7 @@ export const ContactDetails = styled.ul`
   }
 `;
 
-export const ContactDetailsAnchorTag = styled(ContactDetails)`
+export const ContactDetailsAnchorTag = styled.a`
   ${BodyCommonStyles}
   text-decoration: none;
   color: white;
@@ -56,7 +59,6 @@ const Header = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:100vw;
   background-color: ${mainColors.accentColor};
   @media screen and (min-width: 30em) {
     width:auto;

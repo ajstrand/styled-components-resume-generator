@@ -14,6 +14,10 @@ import Header, { ContactDetails, ContactDetailsAnchorTag, ContactName } from './
 import SectionHeader from "./SectionHeader";
 import resumeDataObj from './resumeData';
 
+interface Props {
+  resumeWidth?: string
+}
+
 
 
 const CreateSectionAndHeader = (props): JSX.Element => {
@@ -115,10 +119,11 @@ const CreateHeader = (): JSX.Element => {
   </Header>;
   return content;
 };
+
 const ResumeGridContainer = styled.div`
   background-color: #ffffff;
   display: grid;
-  width: ${props => props.resumeWidth ? props.resumeWidth : "100%"};
+  width: ${(props: Props) => props.resumeWidth ? props.resumeWidth : "100%"};
   @media print {
     width: 100%;
   }

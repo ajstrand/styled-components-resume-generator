@@ -4,12 +4,12 @@ import { setAddon, addDecorator } from '@storybook/react';
 
 import JSXAddon from 'storybook-addon-jsx';
 import { withKnobs} from '@storybook/addon-knobs/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 addDecorator(withKnobs);
 setAddon(JSXAddon);
 
 addParameters({
   viewport: {
-    viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
-    defaultViewport: 'someDefault',
+    defaultViewport: INITIAL_VIEWPORTS,
   },
 });
