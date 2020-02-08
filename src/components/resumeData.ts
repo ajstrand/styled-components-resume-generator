@@ -1,5 +1,5 @@
 const resumeDataObj = {
-  name: "Name",
+  name: "First Last",
   site: "example.com",
   email: "mailto:example.com",
   phone: "444-555-6661",

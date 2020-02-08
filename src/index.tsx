@@ -19,11 +19,10 @@ export interface Props {
 const Button = styled.button`
   background-color:${props => props.color};
     border:"none";
-    color:"white";
+    color:"#ffffff";
     font-size:"20px";
     padding:"15px";
     border-radius:"7px";
-
 `;
 const ExampleComponent = (props: Props): JSX.Element => {
   const { onClick, children, text, color } = props;

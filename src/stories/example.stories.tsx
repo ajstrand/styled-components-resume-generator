@@ -1,5 +1,5 @@
 import React from "react";
-import ExampleComponent from "../components/index"
+import ExampleComponent from "../index"
 import { action } from "@storybook/addon-actions";
 import {  text} from '@storybook/addon-knobs';
 import { withKnobs } from '@storybook/addon-knobs/react';

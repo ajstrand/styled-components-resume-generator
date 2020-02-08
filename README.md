@@ -16,6 +16,12 @@ npm install --save styled-components-resume-generator
 //TODO: write me when library is done
 ```
 
+### Issues
+TODO: remove `skipLibCheck:true` once `@types/styled-components` can be updated. 
+https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311
+https://stackoverflow.com/questions/54706594/types-styled-components-duplicate-identifier-formdata
+
+
 ## Acknowledgments
 
 The original design for this resume template comes from and is copyright of [isabelacmor](https://github.com/isabelacmor)

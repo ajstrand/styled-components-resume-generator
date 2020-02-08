@@ -2,22 +2,24 @@ import styled, { css } from "styled-components";
 import { sizeDefinitions } from "./Theme";
 import { HeaderCommonStyles, BodyCommonStyles } from "./Header";
 export const ResumeBody = styled.div`
-  padding: 20px;
+  padding: 10px;
   display: grid;
   grid-column: 1;
   grid-auto-rows: auto;
   grid-gap: ${sizeDefinitions.primarySpacing};
 `;
 
-export const Section = styled.div``;
-
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  flex-basis: 90vw;
 `;
-export const PlainLeftColumn = styled(Column)``;
+export const PlainLeftColumn = styled(Column)`
+  flex-basis: auto;
+`;
 
 export const PlainRightColumn = styled(Column)`
+  flex-basis: auto;
   grid-area: description;
   & > ul {
     margin: 0;
@@ -37,23 +39,30 @@ export const TwoColumnSection = styled.div`
 `;
 
 export const LeftColumn = styled(Column)`
-  flex-basis: 200px;
-  flex-grow: 9999;
-  margin: 0 1em 1em 0;
+  margin: 0;
+  flex-basis: auto;
+  @media screen and (min-width: 30em) {
+    flex-basis: 200px;
+    flex-grow: 9999;
+    margin: 0 1em 1em 0;
+  }
 `;
 
 export const RightColumn = styled(Column)`
-  flex-basis: 100px;
-  flex-grow: 1;
-  min-width: 300px;
+  flex-basis: auto;
+  @media screen and (min-width: 30em) {
+    flex-basis: 100px;
+    flex-grow: 1;
+    min-width: 300px;
+  }
 `;
 
 export const EducationSection = styled(LeftColumn)``;
 
 export const EducationItem = styled.div``;
 
-export const SkillsSection = styled(RightColumn)`
-  grid-auto-rows: min-content;
+export const Section = styled.div`
+   grid-auto-rows: min-content;
   display: grid;
   grid-gap: ${sizeDefinitions.smallSpacing};
 `;
@@ -64,18 +73,30 @@ const ExperienceProjectSectionCommonStyles = css`
   grid-gap: ${sizeDefinitions.smallSpacing};
 `;
 
+export const ProjectDescList = styled.ul`
+  padding:0;
+`;
+export const ProjectDescListItem = styled.li`
+  list-style-type:none;
+`;
 export const ExperienceProjectSection = styled.div`
   ${ExperienceProjectSectionCommonStyles}
 `;
 
 const ExperienceProjectItemCommonStyles = css`
-  display: grid;
-  grid-template-columns: minmax(auto, 135px) 1fr;
-  grid-template-areas: "title description";
-  grid-gap: ${sizeDefinitions.primarySpacing};
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  flex-basis: 90vw;
+  @media screen and (min-width: 30em) {
+    display: grid;
+    grid-template-areas: "title description";
+    grid-gap: ${sizeDefinitions.primarySpacing};
+    grid-template-columns: minmax(auto, 135px) 1fr;
+  }
 `;
 
-export const ExperienceProjectItem = styled.p`
+export const ExperienceProjectItem = styled.div`
   ${ExperienceProjectItemCommonStyles}
 `;
 
