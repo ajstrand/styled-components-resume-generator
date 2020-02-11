@@ -1,24 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  LeftColumn, PlainLeftColumnDateRange,
+  LeftColumn,
+  PlainLeftColumnDateRange,
   RightColumn,
   PlainRightColumnTitle,
   PlainRightColumnDescription,
-  TwoColumnSection, ResumeBody,
+  TwoColumnSection,
+  ResumeBody,
   ExperienceProjectItem,
-  PlainLeftColumn, PlainLeftColumnName,
-  PlainRightColumn, EducationItem, ProjectDescListItem, ProjectDescList, Section
+  PlainLeftColumn,
+  PlainLeftColumnName,
+  PlainRightColumn,
+  EducationItem,
+  ProjectDescListItem,
+  ProjectDescList,
+  Section
 } from "./ResumeBodyStyles";
-import Header, { ContactDetails, ContactDetailsAnchorTag, ContactName } from './Header';
+import Header, {
+  ContactDetails,
+  ContactDetailsAnchorTag,
+  ContactName
+} from "./Header";
 import SectionHeader from "./SectionHeader";
-import resumeDataObj from './resumeData';
+import resumeDataObj from "./resumeData";
 
 interface Props {
-  resumeWidth?: string
+  resumeWidth?: string;
 }
-
-
 
 const CreateSectionAndHeader = (props): JSX.Element => {
   const { sectionTitle, children } = props;
@@ -40,7 +49,7 @@ const CreateExperienceSection = (): JSX.Element => {
         </PlainLeftColumn>
         <PlainRightColumn>
           <PlainRightColumnTitle>{block.jobTitle}</PlainRightColumnTitle>
-          <PlainRightColumnDescription>
+          <PlainRightColumnDescription as="ul">
             {block.jobDescription.map((item, index) => {
               const desc = <li key={index.toString()}>{item.text}</li>;
               return desc;
@@ -74,7 +83,7 @@ const CreateProjectsSection = (): JSX.Element => {
   return <>{projectList}</>;
 };
 const CreateEducationSection = (): JSX.Element => {
-  const list = resumeDataObj.education.map(section =>
+  const list = resumeDataObj.education.map(section => (
     <EducationItem key={section.toString()}>
       <LeftColumn>
         <PlainLeftColumnName>{section.schoolName}</PlainLeftColumnName>
@@ -82,48 +91,50 @@ const CreateEducationSection = (): JSX.Element => {
       </LeftColumn>
       <RightColumn>
         <PlainRightColumnTitle>{section.degreeTitle}</PlainRightColumnTitle>
-        <PlainRightColumnDescription>{section.degreeDescription}</PlainRightColumnDescription>
+        <PlainRightColumnDescription>
+          {section.degreeDescription}
+        </PlainRightColumnDescription>
       </RightColumn>
     </EducationItem>
-  );
+  ));
   return <>{list}</>;
-
 };
 const CreateSkillsSection = (): JSX.Element => {
   const skillsList = resumeDataObj.skills.map((value, index) => {
-  const nextVal =  resumeDataObj.skills[index + 1];
-   return nextVal ? value.concat(", ") : value
-  }
-  );
+    const nextVal = resumeDataObj.skills[index + 1];
+    return nextVal ? value.concat(", ") : value;
+  });
   const jsx = <span className="description">{skillsList}</span>;
   return jsx;
 };
 const CreateHeader = (): JSX.Element => {
   const list = [
-    resumeDataObj.site,
-    resumeDataObj.email,
-    resumeDataObj.phone
-  ]
+    { label: resumeDataObj.site, href: resumeDataObj.site },
+    { label: resumeDataObj.emailLabel, href: resumeDataObj.emailLinkValue },
+    { label: resumeDataObj.phone }
+  ];
   const DetailsList = list.map(dataToRender => {
-    return <li key={dataToRender.toString()}>
-      <ContactDetailsAnchorTag href={dataToRender} target="_blank">
-        {dataToRender}
-      </ContactDetailsAnchorTag>
-    </li>
-  })
-  const content = <Header>
-    <ContactName>{resumeDataObj.name}</ContactName>
-    <ContactDetails>
-      {DetailsList}
-    </ContactDetails>
-  </Header>;
+    return (
+      <li key={dataToRender.label.toString()}>
+        <ContactDetailsAnchorTag href={dataToRender.href} target="_blank">
+          {dataToRender.label}
+        </ContactDetailsAnchorTag>
+      </li>
+    );
+  });
+  const content = (
+    <Header>
+      <ContactName>{resumeDataObj.name}</ContactName>
+      <ContactDetails>{DetailsList}</ContactDetails>
+    </Header>
+  );
   return content;
 };
 
 const ResumeGridContainer = styled.div`
   background-color: #ffffff;
   display: grid;
-  width: ${(props: Props) => props.resumeWidth ? props.resumeWidth : "100%"};
+  width: ${(props: Props) => (props.resumeWidth ? props.resumeWidth : "100%")};
   @media print {
     width: 100%;
   }
@@ -133,21 +144,21 @@ const ResumeContent = (): JSX.Element => {
     <ResumeGridContainer>
       <CreateHeader />
       <ResumeBody>
-      <CreateSectionAndHeader sectionTitle="experience">
-      <CreateExperienceSection />
-            </CreateSectionAndHeader>
-            <CreateSectionAndHeader sectionTitle="projects">
-      <CreateProjectsSection />
-            </CreateSectionAndHeader>
+        <CreateSectionAndHeader sectionTitle="experience">
+          <CreateExperienceSection />
+        </CreateSectionAndHeader>
+        <CreateSectionAndHeader sectionTitle="projects">
+          <CreateProjectsSection />
+        </CreateSectionAndHeader>
         <TwoColumnSection>
           <LeftColumn>
             <CreateSectionAndHeader sectionTitle="education">
-            <CreateEducationSection />
+              <CreateEducationSection />
             </CreateSectionAndHeader>
           </LeftColumn>
           <RightColumn>
-          <CreateSectionAndHeader sectionTitle="skills">
-            <CreateSkillsSection />
+            <CreateSectionAndHeader sectionTitle="skills">
+              <CreateSkillsSection />
             </CreateSectionAndHeader>
           </RightColumn>
         </TwoColumnSection>
