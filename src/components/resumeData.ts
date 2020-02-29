@@ -1,7 +1,8 @@
 const resumeDataObj = {
   name: "First Last",
-  site: "example.com",
-  email: "mailto:example.com",
+  site: "https://example.com",
+  emailLinkValue: "mailto:foobar@example.com",
+  emailLabel: "foobar@example.com",
   phone: "444-555-6661",
   education: [
     {
@@ -15,7 +16,7 @@ const resumeDataObj = {
     {
       companyName: "Tech Co.",
       dateRange: "June 201XX - Present",
-      jobTitle: "Engineering Managner",
+      jobTitle: "Team Lead",
       jobDescription: [
         {
           text: `Ex novum deserunt consetetur mea, his te dolores constituto,
@@ -68,19 +69,19 @@ const resumeDataObj = {
     }
   ],
   skills: [
-      "JavaScript",
-      "TypeScript",
-      "HTML",
-      "CSS",
-      "Go",
-      "React",
-      "React Native",
-      "Jest",
-      "Webpack",
-      "SCSS",
-      "NodeJS",
-      "SQL"
-    ]
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "Go",
+    "React",
+    "React Native",
+    "Jest",
+    "Webpack",
+    "SCSS",
+    "NodeJS",
+    "SQL"
+  ]
 };
 
 export default resumeDataObj;
