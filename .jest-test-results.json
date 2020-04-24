@@ -1,0 +1,62 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 1,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 1,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 2,
+  "numTotalTests": 1,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1586233680050,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["ExampleComponent"],
+          "failureMessages": [],
+          "fullName": "ExampleComponent is truthy",
+          "location": null,
+          "status": "passed",
+          "title": "is truthy"
+        }
+      ],
+      "endTime": 1586233682657,
+      "message": "",
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/test.ts",
+      "startTime": 1586233680980,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1586233685735,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    \u001b[96msrc/components/Header.tsx\u001b[0m:\u001b[93m71\u001b[0m:\u001b[93m46\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2339: \u001b[0mProperty 'emailLinkValue' does not exist on type 'ConfigProps'.\n\n    \u001b[7m71\u001b[0m     { label: config.emailLabel, href: config.emailLinkValue },\n    \u001b[7m  \u001b[0m \u001b[91m                                             ~~~~~~~~~~~~~~\u001b[0m\n",
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/header.test.tsx",
+      "startTime": 1586233685735,
+      "status": "failed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

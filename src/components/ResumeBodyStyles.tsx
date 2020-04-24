@@ -1,6 +1,23 @@
 import styled, { css } from "styled-components";
-import { sizeDefinitions } from "./Theme";
-import { HeaderCommonStyles, BodyCommonStyles } from "./Header";
+import { sizeDefinitions, mainColors } from "./Theme";
+
+export const HeaderCommonStyles = css`
+  font-weight: 600;
+  font-family: "Yantramanav", sans-serif;
+  font-size: ${sizeDefinitions.headerPrimarySize};
+  color: ${mainColors.textPrimaryColor};
+  text-transform: capitalize;
+`;
+export const BodyCommonStyles = css`
+  font-weight: 500;
+  font-family: "Khula", sans-serif;
+  list-style-type: none;
+  font-size: 0.95em;
+  color: ${mainColors.textSecondaryColor};
+  @media screen and (min-width: 30em) {
+    list-style-type: circle;
+  }
+`;
 export const ResumeBody = styled.div`
   padding: 10px;
   display: grid;
@@ -57,12 +74,8 @@ export const RightColumn = styled(Column)`
   }
 `;
 
-export const EducationSection = styled(LeftColumn)``;
-
-export const EducationItem = styled.div``;
-
 export const Section = styled.div`
-   grid-auto-rows: min-content;
+  grid-auto-rows: min-content;
   display: grid;
   grid-gap: ${sizeDefinitions.smallSpacing};
 `;
@@ -74,10 +87,10 @@ const ExperienceProjectSectionCommonStyles = css`
 `;
 
 export const ProjectDescList = styled.ul`
-  padding:0;
+  padding: 0;
 `;
 export const ProjectDescListItem = styled.li`
-  list-style-type:none;
+  list-style-type: none;
 `;
 export const ExperienceProjectSection = styled.div`
   ${ExperienceProjectSectionCommonStyles}

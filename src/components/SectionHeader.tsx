@@ -1,8 +1,10 @@
-import  styled from 'styled-components';
-import { HeaderCommonStyles } from './Header';
-import { sizeDefinitions, mainColors } from './Theme';
+import React from "react";
 
-const SectionHeader = styled.div `
+import styled from "styled-components";
+import { sizeDefinitions, mainColors } from "./Theme";
+import { Section, HeaderCommonStyles } from "./ResumeBodyStyles";
+
+const SectionHeader = styled.div`
   ${HeaderCommonStyles}
   border-bottom: 1px solid;
   font-size: ${sizeDefinitions.headerPrimarySize};
@@ -11,4 +13,15 @@ const SectionHeader = styled.div `
   margin-bottom: -5px;
 `;
 
-export default SectionHeader
+const SectionAndHeader = (props): JSX.Element => {
+  const { sectionTitle, children } = props;
+  const jsx = (
+    <Section>
+      <SectionHeader>{sectionTitle}</SectionHeader>
+      {children}
+    </Section>
+  );
+  return jsx;
+};
+
+export default SectionAndHeader;

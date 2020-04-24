@@ -1,11 +1,11 @@
 import React from "react";
-import Theme from "./Theme"
+import Theme from "./Theme";
 import ResumeContent from "./ResumeContent";
-
-const App = (): JSX.Element =>  (
-    <Theme>
-      <ResumeContent/>
-    </Theme>
-  )
+import testResumeData from "./testResumeData";
+const App = (): JSX.Element => (
+  <Theme>
+    <ResumeContent config={testResumeData} />
+  </Theme>
+);
 
 export default App;
