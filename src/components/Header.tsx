@@ -61,16 +61,22 @@ interface ConfigProps {
 }
 
 const Header = (props): JSX.Element => {
-  const { name, site, emailLabel, emailLinkValue, phone }: ConfigProps = props;
+  const {
+    name,
+    site,
+    emailLabel,
+    emailLinkValue,
+    phone,
+  }: ConfigProps = props.config;
   const list = [
     { label: site, href: site },
     { label: emailLabel, href: emailLinkValue },
-    { label: phone }
+    { label: phone },
   ];
   let content;
   const objectNotEmpty = Object.keys(props).length > 0;
   if (objectNotEmpty) {
-    const DetailsList = list.map(dataToRender => {
+    const DetailsList = list.map((dataToRender) => {
       return (
         <li key={dataToRender.label.toString()}>
           <ContactDetailsAnchorTag href={dataToRender.href} target="_blank">
