@@ -24,3 +24,4 @@ yarn-error.log*
 .vscode
 
 src/components/testResumeData.js
+src/components/testResumeData.ts
