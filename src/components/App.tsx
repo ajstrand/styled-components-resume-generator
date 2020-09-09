@@ -1,10 +1,10 @@
 import React from "react";
 import Theme from "./Theme";
 import ResumeContent from "./ResumeContent";
-import testResumeData from "./testResumeData";
+import resumeDataObj from "./defaultResumeDataTemplate";
 const App = (): JSX.Element => (
   <Theme>
-    <ResumeContent config={testResumeData} />
+    <ResumeContent config={resumeDataObj} />
   </Theme>
 );
 
