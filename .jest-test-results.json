@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1596682858443,
+  "startTime": 1599448494864,
   "success": true,
   "testResults": [
     {
@@ -40,46 +40,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1596682863902,
+      "endTime": 1599448500154,
       "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/test.js",
-      "startTime": 1596682859640,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a experience component with job data",
-          "location": null,
-          "status": "passed",
-          "title": "renders a experience component with job data"
-        }
-      ],
-      "endTime": 1596682864910,
-      "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/experience.test.js",
-      "startTime": 1596682859640,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a header component with the user's name",
-          "location": null,
-          "status": "passed",
-          "title": "renders a header component with the user's name"
-        }
-      ],
-      "endTime": 1596682864912,
-      "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/header.test.js",
-      "startTime": 1596682859640,
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/test.ts",
+      "startTime": 1599448495940,
       "status": "passed",
       "summary": ""
     },
@@ -94,10 +58,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1596682867477,
+      "endTime": 1599448500382,
       "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/test.ts",
-      "startTime": 1596682859640,
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/test.js",
+      "startTime": 1599448500211,
       "status": "passed",
       "summary": ""
     },
@@ -112,10 +76,10 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1596682868190,
+      "endTime": 1599448500514,
       "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/header.test.tsx",
-      "startTime": 1596682859640,
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/header.test.js",
+      "startTime": 1599448495940,
       "status": "passed",
       "summary": ""
     },
@@ -130,10 +94,46 @@
           "title": "renders a experience component with job data"
         }
       ],
-      "endTime": 1596682868428,
+      "endTime": 1599448500552,
+      "message": "",
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/experience.test.js",
+      "startTime": 1599448495940,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "failureMessages": [],
+          "fullName": "renders a experience component with job data",
+          "location": null,
+          "status": "passed",
+          "title": "renders a experience component with job data"
+        }
+      ],
+      "endTime": 1599448500681,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/experience.test.tsx",
-      "startTime": 1596682863933,
+      "startTime": 1599448495940,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "failureMessages": [],
+          "fullName": "renders a header component with the user's name",
+          "location": null,
+          "status": "passed",
+          "title": "renders a header component with the user's name"
+        }
+      ],
+      "endTime": 1599448500700,
+      "message": "",
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/header.test.tsx",
+      "startTime": 1599448495940,
       "status": "passed",
       "summary": ""
     }

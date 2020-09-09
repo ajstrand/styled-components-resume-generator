@@ -3,11 +3,10 @@ module.exports = {
   addons: [
     "@storybook/addon-jest",
     "@storybook/addon-actions",
-    "@storybook/addon-knobs",
     "storybook-addon-jsx",
     "@storybook/addon-viewport",
     "@storybook/addon-a11y",
     "@storybook/preset-typescript",
-    "@storybook/addon-docs/preset"
-  ]
+    "@storybook/addon-docs/preset",
+  ],
 };
