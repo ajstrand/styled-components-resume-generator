@@ -1,5 +1,5 @@
 {
-  "name": "styled-components-resume-generator",
+  "name": "styled-components-resume",
   "version": "0.0.1",
   "description": "generator that creates a resume with styled components, html and css grid",
   "author": "ajstrand",
