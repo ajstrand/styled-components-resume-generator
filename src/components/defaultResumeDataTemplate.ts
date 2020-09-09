@@ -1,9 +1,11 @@
 const resumeDataObj = {
-  name: "First Last",
-  site: "https://example.com",
-  emailLinkValue: "mailto:foobar@example.com",
-  emailLabel: "foobar@example.com",
-  phone: "444-555-6661",
+  header: {
+    name: "First Last",
+    site: "https://example.com",
+    emailLinkValue: "mailto:foobar@example.com",
+    emailLabel: "foobar@example.com",
+    phone: "444-555-6661",
+  },
   education: [
     {
       schoolName: "A school",

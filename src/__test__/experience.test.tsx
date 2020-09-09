@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import fakeResumeData from "../components/fakeResumeData";
+import resumeDataObj from "../components/defaultResumeDataTemplate";
 import ExperienceSection from "../components/ExperienceSection";
 test("renders a experience component with job data", async () => {
   const { getAllByText } = render(
-    <ExperienceSection config={fakeResumeData.experience} />
+    <ExperienceSection config={resumeDataObj.experience} />
   );
-  const completeText = fakeResumeData.experience[0].jobDescription[0].text;
+  const completeText = resumeDataObj.experience[0].jobDescription[0].text;
   const qwerty = completeText.substring(0, 5);
   const regex = new RegExp(`${qwerty}`, "i");
 

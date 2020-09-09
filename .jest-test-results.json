@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1599448494864,
+  "startTime": 1599626447239,
   "success": true,
   "testResults": [
     {
@@ -40,10 +40,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1599448500154,
+      "endTime": 1599626450458,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/test.ts",
-      "startTime": 1599448495940,
+      "startTime": 1599626447993,
       "status": "passed",
       "summary": ""
     },
@@ -58,10 +58,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1599448500382,
+      "endTime": 1599626450637,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/test.js",
-      "startTime": 1599448500211,
+      "startTime": 1599626450481,
       "status": "passed",
       "summary": ""
     },
@@ -76,10 +76,10 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1599448500514,
+      "endTime": 1599626450810,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/header.test.js",
-      "startTime": 1599448495940,
+      "startTime": 1599626448000,
       "status": "passed",
       "summary": ""
     },
@@ -94,28 +94,10 @@
           "title": "renders a experience component with job data"
         }
       ],
-      "endTime": 1599448500552,
+      "endTime": 1599626450811,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/experience.test.js",
-      "startTime": 1599448495940,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a experience component with job data",
-          "location": null,
-          "status": "passed",
-          "title": "renders a experience component with job data"
-        }
-      ],
-      "endTime": 1599448500681,
-      "message": "",
-      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/experience.test.tsx",
-      "startTime": 1599448495940,
+      "startTime": 1599626448009,
       "status": "passed",
       "summary": ""
     },
@@ -130,10 +112,28 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1599448500700,
+      "endTime": 1599626450908,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/header.test.tsx",
-      "startTime": 1599448495940,
+      "startTime": 1599626447993,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "failureMessages": [],
+          "fullName": "renders a experience component with job data",
+          "location": null,
+          "status": "passed",
+          "title": "renders a experience component with job data"
+        }
+      ],
+      "endTime": 1599626450927,
+      "message": "",
+      "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/experience.test.tsx",
+      "startTime": 1599626447996,
       "status": "passed",
       "summary": ""
     }
