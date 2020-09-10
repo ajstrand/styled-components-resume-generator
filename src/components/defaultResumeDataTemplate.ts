@@ -1,4 +1,4 @@
-const resumeDataObj = {
+const defaultResumeDataObj = {
   header: {
     name: "First Last",
     site: "https://example.com",
@@ -86,4 +86,4 @@ const resumeDataObj = {
   ],
 };
 
-export default resumeDataObj;
+export default defaultResumeDataObj;
