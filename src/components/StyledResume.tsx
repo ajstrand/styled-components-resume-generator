@@ -4,7 +4,7 @@ import ResumeContent from "./ResumeContent";
 import defaultResumeDataObj from "./defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 
-const App = ({ resumeDataObj }): JSX.Element => (
+const StyledResume = ({ resumeDataObj }): JSX.Element => (
   <Theme>
     <ResumeContent
       config={resumeDataObj ? resumeDataObj : defaultResumeDataObj}
@@ -12,7 +12,7 @@ const App = ({ resumeDataObj }): JSX.Element => (
   </Theme>
 );
 
-App.propTypes = {
+StyledResume.propTypes = {
   resumeDataObj: PropTypes.shape({
     header: PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -53,4 +53,4 @@ App.propTypes = {
   }),
 };
 
-export default App;
+export default StyledResume;

@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import React from "react";
 
-import ExampleComponent from 'styled-components-resume-generator'
+import StyledResume from "styled-resume";
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <StyledResume />
+    </div>
+  );
+};
+
+export default App;

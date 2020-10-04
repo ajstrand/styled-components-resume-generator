@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1599702848489,
+  "startTime": 1601784052933,
   "success": true,
   "testResults": [
     {
@@ -40,10 +40,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1599702851510,
+      "endTime": 1601784058235,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/test.js",
-      "startTime": 1599702849250,
+      "startTime": 1601784053938,
       "status": "passed",
       "summary": ""
     },
@@ -58,10 +58,10 @@
           "title": "renders a experience component with job data"
         }
       ],
-      "endTime": 1599702851880,
+      "endTime": 1601784058998,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/experience.test.js",
-      "startTime": 1599702849244,
+      "startTime": 1601784053938,
       "status": "passed",
       "summary": ""
     },
@@ -76,10 +76,10 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1599702851976,
+      "endTime": 1601784059021,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/build/lib/__test__/header.test.js",
-      "startTime": 1599702849305,
+      "startTime": 1601784053938,
       "status": "passed",
       "summary": ""
     },
@@ -94,10 +94,10 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1599702852057,
+      "endTime": 1601784062085,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/header.test.tsx",
-      "startTime": 1599702849245,
+      "startTime": 1601784053938,
       "status": "passed",
       "summary": ""
     },
@@ -112,10 +112,10 @@
           "title": "renders a experience component with job data"
         }
       ],
-      "endTime": 1599702852065,
+      "endTime": 1601784062113,
       "message": "",
       "name": "/Users/alexstrand/Documents/styled-components-resume-generator/src/__test__/experience.test.tsx",
-      "startTime": 1599702849250,
+      "startTime": 1601784053938,
       "status": "passed",
       "summary": ""
     }

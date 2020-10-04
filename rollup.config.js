@@ -10,7 +10,7 @@ import svgr from "@svgr/rollup";
 import pkg from "./package.json";
 
 export default {
-  input: "src/components/App.tsx",
+  input: "src/components/StyledResume.tsx",
   output: [
     {
       file: pkg.main,
