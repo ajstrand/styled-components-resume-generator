@@ -1,6 +1,8 @@
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
+import babel from "@rollup/plugin-babel";
+
 // import postcss from 'rollup-plugin-postcss-modules'
 import postcss from "rollup-plugin-postcss";
 import resolve from "@rollup/plugin-node-resolve";
@@ -10,7 +12,7 @@ import svgr from "@svgr/rollup";
 import pkg from "./package.json";
 
 export default {
-  input: "src/components/StyledResume.tsx",
+  input: "src/components/StyledResume.js",
   output: [
     {
       file: pkg.main,
@@ -32,12 +34,13 @@ export default {
     }),
     url(),
     svgr(),
+    babel({ babelHelpers: "bundled" }),
+    typescript(),
     //below lines in the resolve function added because of
     // https://github.com/rollup/rollup-plugin-node-resolve/issues/107
     resolve({
       preferBuiltins: true,
     }),
-    typescript(),
     //added the content js because of
     // https://github.com/styled-components/styled-components/issues/1654
     commonjs({

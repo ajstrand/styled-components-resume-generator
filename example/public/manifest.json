@@ -1,8 +1,0 @@
-{
-  "short_name": "styled-components-resume-generator",
-  "name": "styled-components-resume-generator",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}

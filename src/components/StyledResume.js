@@ -1,16 +1,22 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import React, { useState, useEffect } from "react";
 import Theme from "./Theme";
 import ResumeContent from "./ResumeContent";
 import defaultResumeDataObj from "./defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 
-const StyledResume = ({ resumeDataObj }): JSX.Element => (
-  <Theme>
-    <ResumeContent
-      config={resumeDataObj ? resumeDataObj : defaultResumeDataObj}
-    />
-  </Theme>
-);
+const StyledResume = ({ resumeDataObj }) => {
+  const [data, setData] = useState(defaultResumeDataObj);
+  useEffect(() => {
+    setData(resumeDataObj ? resumeDataObj : defaultResumeDataObj);
+  }, []);
+
+  return (
+    <Theme>
+      <ResumeContent config={data} />
+    </Theme>
+  );
+};
 
 StyledResume.propTypes = {
   resumeDataObj: PropTypes.shape({
