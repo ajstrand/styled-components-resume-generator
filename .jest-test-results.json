@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1602049674554,
+  "startTime": 1608450685962,
   "success": true,
   "testResults": [
     {
@@ -40,28 +40,10 @@
           "title": "is truthy"
         }
       ],
-      "endTime": 1602049680090,
+      "endTime": 1608450689074,
       "message": "",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/test.js",
-      "startTime": 1602049675582,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a experience component with job data",
-          "location": null,
-          "status": "passed",
-          "title": "renders a experience component with job data"
-        }
-      ],
-      "endTime": 1602049681007,
-      "message": "",
-      "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/experience.test.js",
-      "startTime": 1602049675582,
+      "startTime": 1608450686751,
       "status": "passed",
       "summary": ""
     },
@@ -76,10 +58,10 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1602049681009,
+      "endTime": 1608450689493,
       "message": "",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/header.test.js",
-      "startTime": 1602049675582,
+      "startTime": 1608450686726,
       "status": "passed",
       "summary": ""
     },
@@ -94,10 +76,10 @@
           "title": "renders a experience component with job data"
         }
       ],
-      "endTime": 1602049684419,
+      "endTime": 1608450689558,
       "message": "",
-      "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/experience.test.tsx",
-      "startTime": 1602049675582,
+      "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/experience.test.js",
+      "startTime": 1608450686730,
       "status": "passed",
       "summary": ""
     },
@@ -112,10 +94,28 @@
           "title": "renders a header component with the user's name"
         }
       ],
-      "endTime": 1602049684483,
+      "endTime": 1608450689709,
       "message": "",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/header.test.tsx",
-      "startTime": 1602049675587,
+      "startTime": 1608450686730,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "failureMessages": [],
+          "fullName": "renders a experience component with job data",
+          "location": null,
+          "status": "passed",
+          "title": "renders a experience component with job data"
+        }
+      ],
+      "endTime": 1608450689726,
+      "message": "",
+      "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/experience.test.tsx",
+      "startTime": 1608450686726,
       "status": "passed",
       "summary": ""
     }
