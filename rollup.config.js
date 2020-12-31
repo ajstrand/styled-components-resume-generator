@@ -23,7 +23,7 @@ export default {
     {
       file: pkg.module,
       format: "es",
-      exports: "named",
+      exports: "default",
       sourcemap: true,
     },
   ],
@@ -34,13 +34,13 @@ export default {
     }),
     url(),
     svgr(),
-    babel({ babelHelpers: "bundled" }),
-    typescript(),
-    //below lines in the resolve function added because of
-    // https://github.com/rollup/rollup-plugin-node-resolve/issues/107
-    resolve({
-      preferBuiltins: true,
+    resolve(),
+    babel({
+      exclude: "./node_modules/**",
+      babelHelpers: "bundled",
     }),
+    typescript(),
+
     //added the content js because of
     // https://github.com/styled-components/styled-components/issues/1654
     commonjs({
@@ -48,14 +48,14 @@ export default {
       // left-hand side can be an absolute path, a path
       // relative to the current directory, or the name
       // of a module in node_modules
-      namedExports: {
-        "node_modules/react-is/index.js": [
-          "typeOf",
-          "isElement",
-          "isValidElementType",
-          "ForwardRef",
-        ],
-      },
+      // namedExports: {
+      //   "node_modules/react-is/index.js": [
+      //     "typeOf",
+      //     "isElement",
+      //     "isValidElementType",
+      //     "ForwardRef",
+      //   ],
+      // },
     }),
   ],
 };

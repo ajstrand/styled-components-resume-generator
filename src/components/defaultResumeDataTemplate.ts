@@ -8,10 +8,10 @@ const defaultResumeDataObj = {
   },
   education: [
     {
-      schoolName: "A school",
+      type: "college",
+      name: "A school",
       dateRange: "200X - 20XX",
-      degreeTitle: "Bachelor's",
-      degreeDescription: "Computer Science",
+      programOrDegree: "Bachelor's, Computer Science",
     },
   ],
   experience: [

@@ -85,13 +85,6 @@ const ExperienceProjectSectionCommonStyles = css`
   grid-auto-rows: auto;
   grid-gap: ${sizeDefinitions.smallSpacing};
 `;
-
-export const ProjectDescList = styled.ul`
-  padding: 0;
-`;
-export const ProjectDescListItem = styled.li`
-  list-style-type: none;
-`;
 export const ExperienceProjectSection = styled.div`
   ${ExperienceProjectSectionCommonStyles}
 `;

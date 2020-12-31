@@ -3,13 +3,20 @@ import {
   ExperienceProjectItem,
   LeftColumn,
   RightColumn,
-  ProjectDescList,
-  ProjectDescListItem
 } from "./ResumeBodyStyles";
+
+import styled from "styled-components";
+
+export const ProjectDescList = styled.ul`
+  padding: 0;
+`;
+export const ProjectDescListItem = styled.li`
+  list-style-type: none;
+`;
 
 const ProjectsSection = (props): JSX.Element => {
   const { config } = props;
-  const projectList = config.map(project => {
+  const projectList = config.map((project) => {
     const { title, dateRange, desc } = project;
     const jsx = (
       <ExperienceProjectItem key={title.toString()}>

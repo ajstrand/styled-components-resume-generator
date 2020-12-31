@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React, { useState, useEffect } from "react";
-import Theme from "./Theme";
+//import Theme from "./Theme";
 import ResumeContent from "./ResumeContent";
 import defaultResumeDataObj from "./defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
@@ -12,9 +12,9 @@ const StyledResume = ({ resumeDataObj }) => {
   }, []);
 
   return (
-    <Theme>
-      <ResumeContent config={data} />
-    </Theme>
+    // <Theme>
+    <ResumeContent config={data} />
+    // </Theme>
   );
 };
 
@@ -30,10 +30,16 @@ StyledResume.propTypes = {
     //TODO: support various education types in props
     education: PropTypes.arrayOf(
       PropTypes.shape({
-        schoolName: PropTypes.string,
-        dateRange: PropTypes.string,
-        degreeTitle: PropTypes.string,
-        degreeDescription: PropTypes.string,
+        college: PropTypes.shape({
+          name: PropTypes.string,
+          programOrDegree: PropTypes.string,
+          dateRange: PropTypes.string,
+        }),
+        bootcamp: PropTypes.shape({
+          name: PropTypes.string,
+          programOrDegree: PropTypes.string,
+          dateRange: PropTypes.string,
+        }),
       })
     ),
     experience: PropTypes.arrayOf(

@@ -1,29 +1,25 @@
 import React from "react";
-import {
-  LeftColumn,
-  PlainLeftColumnName,
-  PlainLeftColumnDateRange,
-  RightColumn,
-  PlainRightColumnTitle,
-  PlainRightColumnDescription
-} from "./ResumeBodyStyles";
+import generateColumns from "./BuildColumns";
 
-const EducationSection = (props): JSX.Element => {
+const EducationSection = (props: { config: any }): JSX.Element => {
   const { config } = props;
-  const list = config.map(section => (
-    <div key={section.toString()}>
-      <LeftColumn>
-        <PlainLeftColumnName>{section.schoolName}</PlainLeftColumnName>
-        <PlainLeftColumnDateRange>{section.dateRange}</PlainLeftColumnDateRange>
-      </LeftColumn>
-      <RightColumn>
-        <PlainRightColumnTitle>{section.degreeTitle}</PlainRightColumnTitle>
-        <PlainRightColumnDescription>
-          {section.degreeDescription}
-        </PlainRightColumnDescription>
-      </RightColumn>
-    </div>
-  ));
+  let data: { name: any; date: any; program: any };
+
+  const list = config.map((section) => {
+    data = {
+      name: section.name,
+      date: section.dateRange,
+      program: section.programOrDegree,
+    };
+
+    const { name, date, program } = data;
+
+    return (
+      <section key={section.toString()}>
+        {generateColumns(name, date, program)}
+      </section>
+    );
+  });
   return <>{list}</>;
 };
 
