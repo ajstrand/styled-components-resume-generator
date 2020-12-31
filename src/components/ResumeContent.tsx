@@ -5,7 +5,7 @@ import {
   LeftColumn,
   RightColumn,
   TwoColumnSection,
-  ResumeBody
+  ResumeBody,
 } from "./ResumeBodyStyles";
 import Header from "./Header";
 import ProjectsSection from "./ProjectsSection";
@@ -27,23 +27,25 @@ const ResumeGridContainer = styled.div`
     width: 100%;
   }
 `;
-const Block = (props): JSX.Element => {
+const Block = (props) => {
   const { componentType, config } = props;
   const components = {
     experience: ExperienceSection,
     projects: ProjectsSection,
     education: EducationSection,
-    skills: SkillsSection
+    skills: SkillsSection,
   };
   const Tag = components[componentType];
   const resumeDataToRender = config[componentType];
-  return Tag ? (
+  const dataExists =
+    resumeDataToRender !== null && resumeDataToRender !== undefined
+      ? true
+      : false;
+  return Tag && dataExists ? (
     <SectionAndHeader sectionTitle={componentType}>
       <Tag config={resumeDataToRender} />
     </SectionAndHeader>
-  ) : (
-    <p>component was not rendered</p>
-  );
+  ) : null;
 };
 const ResumeContent = (props): JSX.Element => {
   const { config } = props;
@@ -68,7 +70,7 @@ const ResumeContent = (props): JSX.Element => {
 };
 
 ResumeContent.propTypes = {
-  config: PropTypes.object
+  config: PropTypes.object,
 };
 
 export default ResumeContent;

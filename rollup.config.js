@@ -12,7 +12,7 @@ import svgr from "@svgr/rollup";
 import pkg from "./package.json";
 
 export default {
-  input: "src/components/StyledResume.js",
+  input: "src/components/StyledResume.tsx",
   output: [
     {
       file: pkg.main,

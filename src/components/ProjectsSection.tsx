@@ -14,8 +14,11 @@ export const ProjectDescListItem = styled.li`
   list-style-type: none;
 `;
 
-const ProjectsSection = (props): JSX.Element => {
+const ProjectsSection = (props) => {
   const { config } = props;
+  if (config === null || config === undefined) {
+    return null;
+  }
   const projectList = config.map((project) => {
     const { title, dateRange, desc } = project;
     const jsx = (

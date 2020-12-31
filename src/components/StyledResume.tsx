@@ -5,10 +5,11 @@ import ResumeContent from "./ResumeContent";
 import defaultResumeDataObj from "./defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 
-const StyledResume = ({ resumeDataObj }) => {
+const StyledResume = (props): JSX.Element => {
+  const { config } = props;
   const [data, setData] = useState(defaultResumeDataObj);
   useEffect(() => {
-    setData(resumeDataObj ? resumeDataObj : defaultResumeDataObj);
+    setData(config ? config : defaultResumeDataObj);
   }, []);
 
   return (
@@ -19,7 +20,7 @@ const StyledResume = ({ resumeDataObj }) => {
 };
 
 StyledResume.propTypes = {
-  resumeDataObj: PropTypes.shape({
+  config: PropTypes.shape({
     header: PropTypes.shape({
       name: PropTypes.string.isRequired,
       site: PropTypes.string,
