@@ -103,9 +103,8 @@ npm install --save styled-resume
 
 ### Issues
 
-TODO: remove `skipLibCheck:true` once `@types/styled-components` can be updated.
-https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311
-https://stackoverflow.com/questions/54706594/types-styled-components-duplicate-identifier-formdata
+TODO: remove `skipLibCheck:true` once `@types/styled-components` can be updated.[Github issue](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311)
+[Stackoverflow](https://stackoverflow.com/questions/54706594/types-styled-components-duplicate-identifier-formdata)
 
 ## Acknowledgments
 
