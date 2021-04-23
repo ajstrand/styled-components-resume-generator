@@ -1,4 +1,9 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
+/** @jsx Preact.h */
+/** @jsxFrag Preact.Fragment */
+
+import Preact, { h, Fragment } from "preact";
 import generateColumns from "./BuildColumns";
 
 const EducationSection = (props: { config: any }): JSX.Element => {

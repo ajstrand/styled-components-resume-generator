@@ -8,26 +8,41 @@ import postcss from "rollup-plugin-postcss";
 import resolve from "@rollup/plugin-node-resolve";
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
+import replace from "@rollup/plugin-replace";
 
 import pkg from "./package.json";
+
+import alias from "@rollup/plugin-alias";
+
+import serve from "rollup-plugin-serve";
+import html from "@rollup/plugin-html";
 
 export default {
   input: "src/components/StyledResume.tsx",
   output: [
     {
       file: pkg.main,
-      format: "cjs",
-      exports: "named",
+      format: "umd",
+      name: "foobar",
       sourcemap: true,
     },
     {
       file: pkg.module,
       format: "es",
-      exports: "default",
       sourcemap: true,
     },
   ],
   plugins: [
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+    //serve('dist'),
+    alias({
+      entries: [
+        { find: "react", replacement: "preact/compat" },
+        { find: "react-dom", replacement: "preact/compat" },
+      ],
+    }),
     external(),
     postcss({
       modules: true,
@@ -45,17 +60,6 @@ export default {
     // https://github.com/styled-components/styled-components/issues/1654
     commonjs({
       include: "node_modules/**",
-      // left-hand side can be an absolute path, a path
-      // relative to the current directory, or the name
-      // of a module in node_modules
-      // namedExports: {
-      //   "node_modules/react-is/index.js": [
-      //     "typeOf",
-      //     "isElement",
-      //     "isValidElementType",
-      //     "ForwardRef",
-      //   ],
-      // },
     }),
   ],
 };

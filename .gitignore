@@ -23,5 +23,7 @@ yarn-error.log*
 
 .vscode
 
+*.log
+
 src/components/testResumeData.js
 src/components/testResumeData.ts

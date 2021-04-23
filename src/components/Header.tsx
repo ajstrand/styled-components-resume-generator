@@ -1,4 +1,5 @@
-import React from "react";
+/** @jsx h */
+import { h } from "preact";
 import styled from "styled-components";
 import { mainColors } from "./Theme";
 import { BodyCommonStyles, HeaderCommonStyles } from "./ResumeBodyStyles";

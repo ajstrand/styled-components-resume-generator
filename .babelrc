@@ -1,6 +1,12 @@
 {
   "presets":["@babel/preset-react", "@babel/preset-env", "@babel/preset-typescript"],
-  "plugins": ["@babel/plugin-proposal-export-default-from", 
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", {
+      "importSource": "preact", // defaults to react
+      "pragma": "h",
+      "pragmaFrag": "Fragment"
+    }],
+    "@babel/plugin-proposal-export-default-from", 
     "babel-plugin-styled-components"],
   "env": {
     "test": {

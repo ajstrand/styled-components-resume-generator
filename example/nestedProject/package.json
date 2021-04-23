@@ -1,0 +1,9 @@
+{
+  "version": "0.0.1",
+  "main": "styled-resume.es.js",
+  "type": "module",
+  "private": "true",
+  "author": "alex strand <ajstrand8@gmail.com>",
+  "license": "MIT",
+  "name": "styled-resume"
+}

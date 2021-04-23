@@ -1,5 +1,7 @@
-import React from "react";
+/** @jsx Preact.h */
+/** @jsxFrag Preact.Fragment */
 
+import Preact from "preact";
 const SkillsSection = (props): JSX.Element => {
   const { config } = props;
   const skillsList = config.map((value, index) => {

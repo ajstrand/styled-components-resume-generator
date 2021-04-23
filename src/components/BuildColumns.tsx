@@ -1,4 +1,7 @@
-import React from "react";
+/** @jsx Preact.h */
+/** @jsxFrag Preact.Fragment */
+
+import Preact from "preact";
 import {
   LeftColumn,
   PlainLeftColumnName,

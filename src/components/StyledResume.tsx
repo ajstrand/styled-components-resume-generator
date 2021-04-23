@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import React, { useState, useEffect } from "react";
+/** @jsx h */
+import { h } from "preact";
+import { useState, useEffect } from "preact/hooks";
 //import Theme from "./Theme";
 import ResumeContent from "./ResumeContent";
 import defaultResumeDataObj from "./defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 
-const StyledResume = (props): JSX.Element => {
+const StyledResume = (props: { config: any }): JSX.Element => {
   const { config } = props;
   const [data, setData] = useState(defaultResumeDataObj);
   useEffect(() => {

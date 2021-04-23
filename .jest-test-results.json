@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 0,
+  "numFailedTestSuites": 4,
   "numFailedTests": 0,
-  "numPassedTestSuites": 4,
-  "numPassedTests": 4,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 0,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
-  "numRuntimeErrorTestSuites": 0,
+  "numRuntimeErrorTestSuites": 4,
   "numTodoTests": 0,
   "numTotalTestSuites": 4,
-  "numTotalTests": 4,
+  "numTotalTests": 0,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,79 +26,47 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1609388705216,
-  "success": true,
+  "startTime": 1618979946480,
+  "success": false,
   "testResults": [
     {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a header component with the user's name",
-          "location": null,
-          "status": "passed",
-          "title": "renders a header component with the user's name"
-        }
-      ],
-      "endTime": 1609388711320,
-      "message": "",
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1618979951531,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    SyntaxError: /Users/alexstrand/Documents/projects/styled-resume/.jest/register-context.js: importSource cannot be set when runtime is classic.\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m registerRequireContextHook \u001b[36mfrom\u001b[39m \u001b[32m'babel-plugin-require-context-hook/register'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 3 |\u001b[39m registerRequireContextHook()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 4 |\u001b[39m\u001b[0m\n\n      \u001b[2mat File.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/lib/transformation/file/file.js\u001b[2m:240:12)\u001b[22m\n      \u001b[2mat NodePath.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/index.js\u001b[2m:138:21)\u001b[22m\n      \u001b[2mat PluginPass.enter (\u001b[22mnode_modules/@babel/plugin-transform-react-jsx/lib/create-plugin.js\u001b[2m:153:28)\u001b[22m\n      \u001b[2mat newFn (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js\u001b[2m:175:21)\u001b[22m\n      \u001b[2mat NodePath._call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:55:20)\u001b[22m\n      \u001b[2mat NodePath.call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:42:17)\u001b[22m\n      \u001b[2mat NodePath.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:92:31)\u001b[22m\n      \u001b[2mat TraversalContext.visitQueue (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:116:16)\u001b[22m\n      \u001b[2mat TraversalContext.visitSingle (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:85:19)\u001b[22m\n      \u001b[2mat TraversalContext.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:144:19)\u001b[22m\n",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/header.test.js",
-      "startTime": 1609388705995,
-      "status": "passed",
+      "startTime": 1618979951531,
+      "status": "failed",
       "summary": ""
     },
     {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a experience component with job data",
-          "location": null,
-          "status": "passed",
-          "title": "renders a experience component with job data"
-        }
-      ],
-      "endTime": 1609388711321,
-      "message": "",
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1618979951531,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    SyntaxError: /Users/alexstrand/Documents/projects/styled-resume/.jest/register-context.js: importSource cannot be set when runtime is classic.\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m registerRequireContextHook \u001b[36mfrom\u001b[39m \u001b[32m'babel-plugin-require-context-hook/register'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 3 |\u001b[39m registerRequireContextHook()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 4 |\u001b[39m\u001b[0m\n\n      \u001b[2mat File.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/lib/transformation/file/file.js\u001b[2m:240:12)\u001b[22m\n      \u001b[2mat NodePath.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/index.js\u001b[2m:138:21)\u001b[22m\n      \u001b[2mat PluginPass.enter (\u001b[22mnode_modules/@babel/plugin-transform-react-jsx/lib/create-plugin.js\u001b[2m:153:28)\u001b[22m\n      \u001b[2mat newFn (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js\u001b[2m:175:21)\u001b[22m\n      \u001b[2mat NodePath._call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:55:20)\u001b[22m\n      \u001b[2mat NodePath.call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:42:17)\u001b[22m\n      \u001b[2mat NodePath.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:92:31)\u001b[22m\n      \u001b[2mat TraversalContext.visitQueue (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:116:16)\u001b[22m\n      \u001b[2mat TraversalContext.visitSingle (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:85:19)\u001b[22m\n      \u001b[2mat TraversalContext.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:144:19)\u001b[22m\n",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/build/lib/__test__/experience.test.js",
-      "startTime": 1609388705995,
-      "status": "passed",
+      "startTime": 1618979951531,
+      "status": "failed",
       "summary": ""
     },
     {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a experience component with job data",
-          "location": null,
-          "status": "passed",
-          "title": "renders a experience component with job data"
-        }
-      ],
-      "endTime": 1609388714732,
-      "message": "",
-      "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/experience.test.tsx",
-      "startTime": 1609388706037,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [],
-          "failureMessages": [],
-          "fullName": "renders a header component with the user's name",
-          "location": null,
-          "status": "passed",
-          "title": "renders a header component with the user's name"
-        }
-      ],
-      "endTime": 1609388714948,
-      "message": "",
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1618979951531,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    SyntaxError: /Users/alexstrand/Documents/projects/styled-resume/.jest/register-context.js: importSource cannot be set when runtime is classic.\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m registerRequireContextHook \u001b[36mfrom\u001b[39m \u001b[32m'babel-plugin-require-context-hook/register'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 3 |\u001b[39m registerRequireContextHook()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 4 |\u001b[39m\u001b[0m\n\n      \u001b[2mat File.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/lib/transformation/file/file.js\u001b[2m:240:12)\u001b[22m\n      \u001b[2mat NodePath.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/index.js\u001b[2m:138:21)\u001b[22m\n      \u001b[2mat PluginPass.enter (\u001b[22mnode_modules/@babel/plugin-transform-react-jsx/lib/create-plugin.js\u001b[2m:153:28)\u001b[22m\n      \u001b[2mat newFn (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js\u001b[2m:175:21)\u001b[22m\n      \u001b[2mat NodePath._call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:55:20)\u001b[22m\n      \u001b[2mat NodePath.call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:42:17)\u001b[22m\n      \u001b[2mat NodePath.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:92:31)\u001b[22m\n      \u001b[2mat TraversalContext.visitQueue (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:116:16)\u001b[22m\n      \u001b[2mat TraversalContext.visitSingle (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:85:19)\u001b[22m\n      \u001b[2mat TraversalContext.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:144:19)\u001b[22m\n",
       "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/header.test.tsx",
-      "startTime": 1609388705995,
-      "status": "passed",
+      "startTime": 1618979951531,
+      "status": "failed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [],
+      "coverage": {},
+      "endTime": 1618979951531,
+      "message": "  \u001b[1m● \u001b[22mTest suite failed to run\n\n    SyntaxError: /Users/alexstrand/Documents/projects/styled-resume/.jest/register-context.js: importSource cannot be set when runtime is classic.\n    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m registerRequireContextHook \u001b[36mfrom\u001b[39m \u001b[32m'babel-plugin-require-context-hook/register'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 2 |\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 3 |\u001b[39m registerRequireContextHook()\u001b[33m;\u001b[39m\u001b[0m\n    \u001b[0m \u001b[90m 4 |\u001b[39m\u001b[0m\n\n      \u001b[2mat File.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/lib/transformation/file/file.js\u001b[2m:240:12)\u001b[22m\n      \u001b[2mat NodePath.buildCodeFrameError (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/index.js\u001b[2m:138:21)\u001b[22m\n      \u001b[2mat PluginPass.enter (\u001b[22mnode_modules/@babel/plugin-transform-react-jsx/lib/create-plugin.js\u001b[2m:153:28)\u001b[22m\n      \u001b[2mat newFn (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js\u001b[2m:175:21)\u001b[22m\n      \u001b[2mat NodePath._call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:55:20)\u001b[22m\n      \u001b[2mat NodePath.call (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:42:17)\u001b[22m\n      \u001b[2mat NodePath.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js\u001b[2m:92:31)\u001b[22m\n      \u001b[2mat TraversalContext.visitQueue (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:116:16)\u001b[22m\n      \u001b[2mat TraversalContext.visitSingle (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:85:19)\u001b[22m\n      \u001b[2mat TraversalContext.visit (\u001b[22mnode_modules/@babel/core/node_modules/@babel/traverse/lib/context.js\u001b[2m:144:19)\u001b[22m\n",
+      "name": "/Users/alexstrand/Documents/projects/styled-resume/src/__test__/experience.test.tsx",
+      "startTime": 1618979951531,
+      "status": "failed",
       "summary": ""
     }
   ],

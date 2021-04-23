@@ -3,7 +3,7 @@ module.exports = {
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.(jsx|js)?$": "babel-jest"
+    "^.+\\.(jsx|js)?$": "babel-jest",
   },
-  setupFiles: ["<rootDir>/.jest/register-context.js"]
+  //setupFiles: ["<rootDir>/.jest/register-context.js"]
 };

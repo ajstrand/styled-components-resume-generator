@@ -1,5 +1,8 @@
-import React from "react";
-import { render } from "@testing-library/react";
+/** @jsx Preact.h */
+/** @jsxFrag Preact.Fragment */
+
+import Preact from "preact";
+import { render } from "@testing-library/preact";
 import "@testing-library/jest-dom/extend-expect";
 import resumeDataObj from "../components/defaultResumeDataTemplate";
 import ExperienceSection from "../components/ExperienceSection";
