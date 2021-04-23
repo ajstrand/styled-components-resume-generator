@@ -15,7 +15,9 @@ npm run start
 ```
 
 A config can be provided to resume to change the contents,
-although the colors/general css is hard coded at the moment.
+although the colors/general CSS is hard coded at the moment.
+
+The ability to customize CSS will be provided.
 
 The config is a plain JavaScript object that has the following schema/shape
 
@@ -34,6 +36,12 @@ const defaultResumeDataObj = {
       name: "A school",
       dateRange: "200X - 20XX",
       programOrDegree: "Bachelor's, Computer Science",
+    },
+    {
+      type: "bootcamp",
+      name: "dev bootcamp",
+      dateRange: "200X - 20XX",
+      programOrDegree: "Fullstack certificate",
     },
   ],
   experience: [
@@ -86,6 +94,56 @@ const defaultResumeDataObj = {
     },
   ],
   skills: ["JavaScript", "TypeScript", "HTML"],
+};
+```
+
+the React/Preact prop types looks like this
+
+```js
+StyledResume.propTypes = {
+  config: PropTypes.shape({
+    header: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      site: PropTypes.string,
+      emailLinkValue: PropTypes.string.isRequired,
+      emailLabel: PropTypes.string.isRequired,
+      phone: PropTypes.string,
+    }),
+    education: PropTypes.arrayOf(
+      PropTypes.shape({
+        college: PropTypes.shape({
+          name: PropTypes.string,
+          programOrDegree: PropTypes.string,
+          dateRange: PropTypes.string,
+        }),
+        bootcamp: PropTypes.shape({
+          name: PropTypes.string,
+          programOrDegree: PropTypes.string,
+          dateRange: PropTypes.string,
+        }),
+      })
+    ),
+    experience: PropTypes.arrayOf(
+      PropTypes.shape({
+        companyName: PropTypes.string.isRequired,
+        dateRange: PropTypes.string.isRequired,
+        jobTitle: PropTypes.string.isRequired,
+        jobDescription: PropTypes.arrayOf(
+          PropTypes.shape({
+            text: PropTypes.string.isRequired,
+          })
+        ),
+      })
+    ),
+    projects: PropTypes.arrayOf(
+      PropTypes.shape({
+        dateRange: PropTypes.string,
+        title: PropTypes.string,
+        desc: PropTypes.string,
+      })
+    ),
+    skills: PropTypes.arrayOf(string),
+  }),
 };
 ```
 
