@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import babel from "@rollup/plugin-babel";
 
-// import postcss from 'rollup-plugin-postcss-modules'
 import postcss from "rollup-plugin-postcss";
 import resolve from "@rollup/plugin-node-resolve";
 import url from "@rollup/plugin-url";
@@ -16,6 +15,9 @@ import alias from "@rollup/plugin-alias";
 
 import serve from "rollup-plugin-serve";
 import html from "@rollup/plugin-html";
+
+import linaria from '@linaria/rollup';
+import css from 'rollup-plugin-css-only';
 
 export default {
   input: "src/components/StyledResume.tsx",
@@ -35,6 +37,12 @@ export default {
   plugins: [
     replace({
       "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+    linaria({
+      sourceMap: process.env.NODE_ENV !== 'production',
+    }),
+    css({
+      output: 'styles.css',
     }),
     //serve('dist'),
     alias({
