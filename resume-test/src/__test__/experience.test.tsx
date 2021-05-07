@@ -4,8 +4,8 @@
 import Preact from "preact";
 import { render } from "@testing-library/preact";
 import "@testing-library/jest-dom/extend-expect";
-import resumeDataObj from "../components/defaultResumeDataTemplate";
-import ExperienceSection from "../components/ExperienceSection";
+import resumeDataObj from "../../components/defaultResumeDataTemplate";
+import ExperienceSection from "../../components/ExperienceSection";
 test("renders a experience component with job data", async () => {
   const { getAllByText } = render(
     <ExperienceSection config={resumeDataObj.experience} />

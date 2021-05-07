@@ -1,11 +1,12 @@
-/* eslint-disable no-unused-vars */
-/** @jsx Preact.h */
-/** @jsxFrag Preact.Fragment */
+/** @jsx h */
+/** @jsxFrag Fragment */
 
 import {h} from "preact"
 import { styled } from '@linaria/react';
 
 import PropTypes from "prop-types";
+import { useTheme } from './Theme';
+
 // import {
 //   LeftColumn,
 //   RightColumn,
@@ -49,14 +50,21 @@ const ResumeGridContainer = styled.div`
 //     </SectionAndHeader>
 //   ) : null;
 // };
-const ResumeContent = (props) => {
-  const { config, theme } = props;
-  console.log(theme)
-  const Title = styled.h1`
-  font-family: ${({theme}) => theme.userColors.pink};
+
+const Title = styled.h1`
+font-size:40px!important;
+border: 4px solid;
+color: ${props => props.textColor};
 `;
+
+const ResumeContent = (props) => {
+  const { config} = props;
+  const theme = useTheme()
+
+  console.log(theme.userColors)
+
   return (
-    <Title theme={theme} />
+    <Title textColor={theme.userColors.pink}>hello</Title>
     // <ResumeGridContainer>
     //   <Header theme={theme} config={config.header} />
     //   <ResumeBody>

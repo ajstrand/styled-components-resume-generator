@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-/** @jsx Preact.h */
-/** @jsxFrag Preact.Fragment */
+/** @jsx h */
+/** @jsxFrag Fragment */
 
 import {h} from "preact"
 const SkillsSection = (props) => {

@@ -1,4 +1,3 @@
-import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import babel from "@rollup/plugin-babel";
@@ -13,14 +12,11 @@ import pkg from "./package.json";
 
 import alias from "@rollup/plugin-alias";
 
-import serve from "rollup-plugin-serve";
-import html from "@rollup/plugin-html";
-
 import linaria from '@linaria/rollup';
 import css from 'rollup-plugin-css-only';
 
 export default {
-  input: "src/components/StyledResume.tsx",
+  input: "src/StyledResume.jsx",
   output: [
     {
       file: pkg.main,
@@ -62,8 +58,6 @@ export default {
       exclude: "./node_modules/**",
       babelHelpers: "bundled",
     }),
-    typescript(),
-
     //added the content js because of
     // https://github.com/styled-components/styled-components/issues/1654
     commonjs({

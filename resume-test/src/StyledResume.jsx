@@ -1,11 +1,10 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/** @jsx Preact.h */
+/** @jsx h */
 import { h } from "preact";
 import { useState, useEffect } from "preact/hooks";
-import ResumeContent from "./ResumeContent";
-import defaultResumeDataObj from "./defaultResumeDataTemplate";
+import ResumeContent from "./components/ResumeContent";
+import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
-import { ThemeProvider, useTheme } from './Theme';
+import { ThemeProvider, useTheme } from './components/Theme';
 
 const StyledResume = (props) => {
   const { config } = props;
@@ -18,7 +17,7 @@ const StyledResume = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
-    <ResumeContent config={data} />
+    <ResumeContent config={data} userColors={theme.userColors} />
     </ThemeProvider>
   );
 };
