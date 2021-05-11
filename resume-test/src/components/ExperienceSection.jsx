@@ -1,9 +1,9 @@
-/** @jsx h */
+;/** @jsx h */
 /** @jsxFrag Fragment */
 
 import { h } from "preact";
-import { generateAllColumns } from "./BuildColumns";
-import { ExperienceProjectItem } from "./ResumeBodyStyles";
+import { generateAllColumns } from "./BuildColumns.jsx";
+import { ExperienceProjectItem } from "./ResumeBodyStyles.jsx";
 
 const ExperienceSection = (props) => {
   const { config } = props;
@@ -20,7 +20,7 @@ const ExperienceSection = (props) => {
     );
     return jsx;
   });
-  return <>{list}</>;
+  return list;
 };
 
 export default ExperienceSection;

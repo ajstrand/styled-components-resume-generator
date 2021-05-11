@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { useState, useEffect } from "preact/hooks";
-import ResumeContent from "./components/ResumeContent";
+import ResumeContent from "./components/ResumeContent.jsx";
 import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 import { ThemeProvider, useTheme } from './components/Theme';

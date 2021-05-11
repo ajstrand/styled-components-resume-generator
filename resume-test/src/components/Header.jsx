@@ -2,8 +2,8 @@
 /** @jsxFrag Fragment */
 import { h } from "preact";
 import styled from "styled-components";
-import myTheme from "../baseTheme";
-import { BodyCommonStyles, HeaderCommonStyles } from "./ResumeBodyStyles";
+import myTheme from "./baseTheme";
+import { BodyCommonStyles, HeaderCommonStyles } from "./ResumeBodyStyles.jsx";
 const {mainColors} = myTheme
 export const Description = styled.p`
   ${BodyCommonStyles}
@@ -17,10 +17,12 @@ export const Accent = styled.span`
 
 export const ContactName = styled.span`
   ${HeaderCommonStyles}
-  font-size:1em;
+  padding-top:1em;
+  font-size:2em;
   color: white;
   @media screen and (min-width: 30em) {
     font-size: 3em;
+    padding-top:unset;
   }
 `;
 

@@ -1,4 +1,4 @@
-/** @jsx h */
+;/** @jsx h */
 /** @jsxFrag Fragment */
 
 import { h } from "preact";
@@ -6,7 +6,7 @@ import {
   ExperienceProjectItem,
   LeftColumn,
   RightColumn,
-} from "./ResumeBodyStyles";
+} from "./ResumeBodyStyles.jsx";
 
 import styled from "styled-components";
 
@@ -39,7 +39,7 @@ const ProjectsSection = (props) => {
     );
     return jsx;
   });
-  return <>{projectList}</>;
+  return projectList;
 };
 
 export default ProjectsSection;

@@ -1,8 +1,8 @@
-/** @jsx h */
+;/** @jsx h */
 /** @jsxFrag Fragment */
 
 import { h } from "preact";
-import generateColumns from "./BuildColumns";
+import generateColumns from "./BuildColumns.jsx";
 
 const EducationSection = (props) => {
   const { config } = props;
@@ -23,7 +23,7 @@ const EducationSection = (props) => {
       </section>
     );
   });
-  return <>{list}</>;
+  return list;
 };
 
 export default EducationSection;

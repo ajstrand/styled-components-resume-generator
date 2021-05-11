@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import myTheme from "../baseTheme";
+import myTheme from "./baseTheme";
 const {mainColors, sizeDefinitions} = myTheme
 
 export const HeaderCommonStyles = css`

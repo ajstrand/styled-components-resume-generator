@@ -3,8 +3,8 @@
 
 import {h} from "preact"
 import styled from "styled-components";
-import myTheme from "../baseTheme";
-import { Section, HeaderCommonStyles } from "./ResumeBodyStyles";
+import myTheme from "./baseTheme";
+import { Section, HeaderCommonStyles } from "./ResumeBodyStyles.jsx";
 const {mainColors, sizeDefinitions} = myTheme
 
 const SectionHeader = styled.div`

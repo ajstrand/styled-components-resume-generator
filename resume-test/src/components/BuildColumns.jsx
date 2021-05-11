@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 
-import { h } from "preact";
+import { h, Fragment } from "preact";
 import {
   LeftColumn,
   PlainLeftColumnName,
@@ -9,7 +9,7 @@ import {
   RightColumn,
   PlainRightColumnTitle,
   PlainRightColumnDescription,
-} from "./ResumeBodyStyles";
+} from "./ResumeBodyStyles.jsx";
 
 const generateColumns = (
   first,
