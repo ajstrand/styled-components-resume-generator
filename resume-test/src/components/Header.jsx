@@ -1,19 +1,18 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h } from "preact";
-import styled from "styled-components";
-import myTheme from "./baseTheme";
+import { styled } from '@linaria/react';
 import { BodyCommonStyles, HeaderCommonStyles } from "./ResumeBodyStyles.jsx";
-const {mainColors} = myTheme
+import { useState, useEffect } from 'preact/hooks';
 export const Description = styled.p`
   ${BodyCommonStyles}
 `;
 
-export const Accent = styled.span`
-  font-weight: 600;
-  font-style: italic;
-  color: ${mainColors.textPrimaryColor};
-`;
+// export const Accent = styled.span`
+//   font-weight: 600;
+//   font-style: italic;
+//   color: ${mainColors.textPrimaryColor};
+// `;
 
 export const ContactName = styled.span`
   ${HeaderCommonStyles}
@@ -37,7 +36,6 @@ export const ContactDetails = styled.ul`
 `;
 
 export const ContactDetailsAnchorTag = styled.a`
-  ${BodyCommonStyles}
   text-decoration: none;
   color: white;
 `;
@@ -47,9 +45,10 @@ const HeaderBase = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${mainColors.accentColor};
+  background-color: ${props => props.color};
+  height: fit-content;
   @media screen and (min-width: 30em) {
-    width: auto;
+    flex-basis: auto;
     padding: 0 20px;
     flex-direction: row;
     justify-content: space-between;
@@ -64,6 +63,15 @@ const Header = (props) => {
     emailLinkValue,
     phone,
   } = props.config;
+
+  const {theme} = props
+
+  const [localTheme, setData] = useState(theme)
+
+  useEffect(() => {
+    setData(theme.mainColors)
+  }, [theme])
+
   const list = [
     { label: site, href: site },
     { label: emailLabel, href: emailLinkValue },
@@ -82,7 +90,7 @@ const Header = (props) => {
       );
     });
     content = (
-      <HeaderBase>
+      <HeaderBase color={localTheme.headerPrimaryColor}>
         <ContactName>{name}</ContactName>
         <ContactDetails>{DetailsList}</ContactDetails>
       </HeaderBase>

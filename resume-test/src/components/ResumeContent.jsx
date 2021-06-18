@@ -23,6 +23,7 @@ import ExperienceSection from "./ExperienceSection.jsx";
 import SectionAndHeader from "./SectionHeader.jsx";
 
 const ResumeGridContainer = styled.div`
+height: 100%;
   background-color: #ffffff;
   display: grid;
   width: ${(props) =>
@@ -64,7 +65,7 @@ const ResumeContent = (props) => {
     // <Title textColor={theme.userColors.pink}>hello</Title>
     <ResumeGridContainer>
       <Header theme={theme} config={config.header} />
-      <ResumeBody>
+      <ResumeBody theme={theme}>
         <Block theme={theme} componentType="experience" config={config} />
         <Block theme={theme} componentType="projects" config={config} />
         <TwoColumnSection>

@@ -6,18 +6,44 @@ import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 import { ThemeProvider, useTheme } from './components/Theme';
 
-const StyledResume = (props) => {
-  const { config } = props;
-  const theme = useTheme()
 
+//TODO: fix me stackoverflow
+const copyColor = (theme, userColors) => {
+  
+  let propsToFind = ["accentColor", "headerPrimaryColor"]
+  for (let key in theme) {
+    let newKey = userColors[key] 
+    let old = theme[key]
+    propsToFind.forEach((el) => {
+      if(old[el] && newKey[el] !== undefined){
+        theme[key][el] = newKey[el]
+      }
+    })
+    
+    
+
+    
+  }
+  return theme
+}
+
+const StyledResume = (props) => {
+  const { config, userColors } = props;
+  let theme = useTheme()
+  const [localTheme, setTheme] = useState(theme)
   const [data, setData] = useState(defaultResumeDataObj);
+
   useEffect(() => {
     setData(config ? config : defaultResumeDataObj);
-  }, []);
+// let's copy all user properties into it
+    let res = copyColor(theme, userColors)
+    setTheme(res)
+
+  }, [localTheme]);
 
   return (
-    <ThemeProvider theme={theme}>
-    <ResumeContent config={data} userColors={theme.userColors} />
+    <ThemeProvider theme={localTheme}>
+    <ResumeContent config={data} userColors={localTheme} />
     </ThemeProvider>
   );
 };

@@ -1,12 +1,24 @@
-import styled, { css } from "styled-components";
-import myTheme from "./baseTheme";
-const {mainColors, sizeDefinitions} = myTheme
+import { styled} from '@linaria/react';
+import { css } from '@linaria/core';
+const theme = {
+  mainColors:{
+      accentColor: "#BC3463",
+      textPrimaryColor: "rgb(90, 87, 87)",
+      textSecondaryColor: "#737373",
+      headerPrimaryColor: "#BC3463",
+    },
+  sizeDefinitions:{
+      headerPrimarySize: "1em",
+      primarySpacing: "1em",
+      smallSpacing: "0.5em",
+    }
+  }
 
 export const HeaderCommonStyles = css`
   font-weight: 600;
   font-family: "Yantramanav", sans-serif;
-  font-size: ${sizeDefinitions.headerPrimarySize};
-  color: ${mainColors.textPrimaryColor};
+  font-size: ${theme.sizeDefinitions.headerPrimarySize};
+  color: ${theme.mainColors.textPrimaryColor};
   text-transform: capitalize;
 `;
 export const BodyCommonStyles = css`
@@ -14,7 +26,7 @@ export const BodyCommonStyles = css`
   font-family: "Khula", sans-serif;
   list-style-type: none;
   font-size: 0.95em;
-  color: ${mainColors.textSecondaryColor};
+  color: ${theme.mainColors.textSecondaryColor};
   @media screen and (min-width: 30em) {
     list-style-type: circle;
   }
@@ -24,7 +36,7 @@ export const ResumeBody = styled.div`
   display: grid;
   grid-column: 1;
   grid-auto-rows: auto;
-  grid-gap: ${sizeDefinitions.primarySpacing};
+  grid-gap: ${theme.sizeDefinitions.primarySpacing};
 `;
 
 const Column = styled.div`
@@ -78,13 +90,13 @@ export const RightColumn = styled(Column)`
 export const Section = styled.div`
   grid-auto-rows: min-content;
   display: grid;
-  grid-gap: ${sizeDefinitions.smallSpacing};
+  grid-gap: ${theme.sizeDefinitions.smallSpacing};
 `;
 
 const ExperienceProjectSectionCommonStyles = css`
   display: grid;
   grid-auto-rows: auto;
-  grid-gap: ${sizeDefinitions.smallSpacing};
+  grid-gap: ${theme.sizeDefinitions.smallSpacing};
 `;
 export const ExperienceProjectSection = styled.div`
   ${ExperienceProjectSectionCommonStyles}
@@ -98,7 +110,7 @@ const ExperienceProjectItemCommonStyles = css`
   @media screen and (min-width: 30em) {
     display: grid;
     grid-template-areas: "title description";
-    grid-gap: ${sizeDefinitions.primarySpacing};
+    grid-gap: ${theme.sizeDefinitions.primarySpacing};
     grid-template-columns: minmax(auto, 135px) 1fr;
   }
 `;

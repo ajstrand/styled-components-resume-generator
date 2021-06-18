@@ -12,9 +12,6 @@ const myTheme = {
         headerPrimarySize: "1em",
         primarySpacing: "1em",
         smallSpacing: "0.5em",
-      },
-      userColors:{
-        pink:"pink"
       }
 }
 
