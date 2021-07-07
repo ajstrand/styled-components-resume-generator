@@ -1,0 +1,22 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:prettier/recommended",
+    "preact"
+  ],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "import/export": 0,
+    "no-unused-vars":"warn"
+  }
+}

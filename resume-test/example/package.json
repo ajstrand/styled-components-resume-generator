@@ -1,0 +1,17 @@
+{
+  "name": "pre-ex",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "cp -r  ../dist/styles.css ./src/ && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "preact": "link:../node_modules/preact",
+    "styled-resume": "link:.."
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.0.0",
+    "vite": "^2.2.3"
+  }
+}
