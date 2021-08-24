@@ -36,7 +36,7 @@
 		"react-dom": "preact/compat"
 	},
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@callstack/react-theme-provider": "^3.0.6",
     "@linaria/babel-preset": "^3.0.0-beta.4",
     "@linaria/core": "^3.0.0-beta.4",
@@ -51,7 +51,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-styled-components": "^1.12.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "core-js": "^3.15.2",
+    "core-js": "^3.16.0",
     "css-loader": "^4.3.0",
     "eslint": "^7.5.0",
     "gh-pages": "^3.2.3",
@@ -65,7 +65,7 @@
     "preact": "^10.5.14",
     "preact-iso": "^2.0.3",
     "pretty-quick": "^3.1.1",
-    "rollup": "^2.53.3",
+    "rollup": "^2.56.3",
     "styled-components": "^5.2.1",
     "styled-theming": "^2.2.0",
     "stylelint": "^13.13.1",

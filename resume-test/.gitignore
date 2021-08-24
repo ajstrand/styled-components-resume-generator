@@ -28,3 +28,6 @@ yarn-error.log*
 src/components/testResumeData.js
 
 ../.DS_Store
+
+yarn.lock
+package-lock.json
