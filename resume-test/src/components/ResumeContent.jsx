@@ -72,9 +72,9 @@ const ResumeContent = (props) => {
           <LeftColumn>
             <Block theme={theme} componentType="education" config={config} />
           </LeftColumn>
-          <RightColumn>
+          {/* <RightColumn>
             <Block theme={theme} componentType="skills" config={config} />
-          </RightColumn>
+          </RightColumn> */}
         </TwoColumnSection>
       </ResumeBody>
     </ResumeGridContainer>

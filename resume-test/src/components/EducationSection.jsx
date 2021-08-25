@@ -3,7 +3,7 @@
 
 import { h } from "preact";
 import generateColumns from "./BuildColumns.jsx";
-
+import { EducationDetails } from "./ResumeBodyStyles.jsx";
 const EducationSection = (props) => {
   const { config } = props;
   let data;
@@ -18,9 +18,9 @@ const EducationSection = (props) => {
     const { name, date, program } = data;
 
     return (
-      <section key={section.toString()}>
+      <EducationDetails key={section.toString()}>
         {generateColumns(name, date, program)}
-      </section>
+      </EducationDetails>
     );
   });
   return list;

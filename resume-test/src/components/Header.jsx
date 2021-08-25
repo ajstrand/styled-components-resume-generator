@@ -23,6 +23,9 @@ export const ContactName = styled.span`
     font-size: 3em;
     padding-top:unset;
   }
+  @media print {
+    font-size: 1em;
+  }
 `;
 
 export const ContactDetails = styled.ul`
@@ -32,6 +35,16 @@ export const ContactDetails = styled.ul`
   text-align: center;
   @media screen and (min-width: 30em) {
     text-align: right;
+  }
+  @media print {
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    li {
+      margin: 1em;
+    }
   }
 `;
 
@@ -52,6 +65,12 @@ const HeaderBase = styled.header`
     padding: 0 20px;
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media print {
+    height: 3em;
+    flex-direction: row;
+    align-items: center;
+  justify-content: center;
   }
 `;
 

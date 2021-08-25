@@ -17,15 +17,15 @@ const generateColumns = (
   third
 ) => {
   return (
-    <>
-      <LeftColumn>
+    <div class="details">
+      <LeftColumn class="details">
         <PlainLeftColumnName>{first}</PlainLeftColumnName>
         <PlainLeftColumnDateRange>{second}</PlainLeftColumnDateRange>
       </LeftColumn>
       <RightColumn>
         <PlainRightColumnTitle>{third}</PlainRightColumnTitle>
       </RightColumn>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import "preact/debug"
 import StyledResume from 'styled-resume';
-
+import "./example.css"
 export function App(props) {
   const myColors = {
     mainColors:{
@@ -9,6 +9,9 @@ export function App(props) {
     }
   }
   return (
-      <StyledResume userColors={myColors}/>
+    <div className="example">
+        <StyledResume userColors={myColors}/>
+    </div>
+    
   )
 }

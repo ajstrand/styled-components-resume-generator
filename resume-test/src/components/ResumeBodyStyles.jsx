@@ -99,11 +99,7 @@ const ExperienceProjectSectionCommonStyles = css`
   grid-gap: ${theme.sizeDefinitions.smallSpacing};
 `;
 export const ExperienceProjectSection = styled.div`
-  ${ExperienceProjectSectionCommonStyles}
-`;
-
-const ExperienceProjectItemCommonStyles = css`
-  display: flex;
+   display: flex;
   flex-direction: column;
   margin-top: 1em;
   flex-basis: 90vw;
@@ -113,10 +109,36 @@ const ExperienceProjectItemCommonStyles = css`
     grid-gap: ${theme.sizeDefinitions.primarySpacing};
     grid-template-columns: minmax(auto, 135px) 1fr;
   }
+  @media print {
+    .details {
+      flex-direction: row;
+    }
+  }
 `;
 
 export const ExperienceProjectItem = styled.div`
-  ${ExperienceProjectItemCommonStyles}
+   display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  flex-basis: 90vw;
+  @media screen and (min-width: 30em) {
+    display: grid;
+    grid-template-areas: "title description";
+    grid-gap: ${theme.sizeDefinitions.primarySpacing};
+    grid-template-columns: minmax(auto, 135px) 1fr;
+  }
+  @media print {
+    margin-top: 0.2em;
+    .details {
+      flex-direction: row;
+      display: flex;
+      margin-right: 1em;
+
+      div {
+        margin-right: 1em;
+      }
+    }
+  }
 `;
 
 export const PlainLeftColumnName = styled(PlainLeftColumn)`
@@ -135,4 +157,26 @@ export const PlainRightColumnTitle = styled(PlainRightColumn)`
 
 export const PlainRightColumnDescription = styled(PlainRightColumn)`
   ${BodyCommonStyles}
+  @media print {
+    margin: 0!important;
+    line-height: 11px;
+    font-size: 10px!important;
+  }
+
+
 `;
+
+export const EducationDetails = styled.div`
+   @media print {
+    .details {
+      font-size: 9px;
+      flex-direction: row;
+      display: flex;
+      margin-right: 1em;
+
+      div {
+        margin-right: 1em;
+      }
+    }
+  }
+`

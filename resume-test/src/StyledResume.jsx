@@ -5,6 +5,7 @@ import ResumeContent from "./components/ResumeContent.jsx";
 import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
 import { ThemeProvider, useTheme } from './components/Theme';
+import testResumeData from './components/testResumeData';
 
 
 //TODO: fix me stackoverflow
@@ -31,10 +32,10 @@ const StyledResume = (props) => {
   const { config, userColors } = props;
   let theme = useTheme()
   const [localTheme, setTheme] = useState(theme)
-  const [data, setData] = useState(defaultResumeDataObj);
+  const [data, setData] = useState(testResumeData);
 
   useEffect(() => {
-    setData(config ? config : defaultResumeDataObj);
+    setData(config ? config : data);
 // let's copy all user properties into it
     let res = copyColor(theme, userColors)
     setTheme(res)

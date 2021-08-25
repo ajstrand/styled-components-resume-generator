@@ -1,0 +1,9 @@
+.example {
+  width: 80%;
+}
+
+@media print {
+  .example {
+    width: 100%;
+  }
+}
