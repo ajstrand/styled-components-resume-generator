@@ -1,24 +1,20 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 
-import { h, Fragment } from "preact";
+import { h, Fragment } from 'preact'
 import {
   LeftColumn,
   PlainLeftColumnName,
   PlainLeftColumnDateRange,
   RightColumn,
   PlainRightColumnTitle,
-  PlainRightColumnDescription,
-} from "./ResumeBodyStyles.jsx";
+  PlainRightColumnDescription
+} from './ResumeBodyStyles.jsx'
 
-const generateColumns = (
-  first,
-  second,
-  third
-) => {
+const generateColumns = (first, second, third) => {
   return (
-    <div class="details">
-      <LeftColumn class="details">
+    <div class='details'>
+      <LeftColumn class='details'>
         <PlainLeftColumnName>{first}</PlainLeftColumnName>
         <PlainLeftColumnDateRange>{second}</PlainLeftColumnDateRange>
       </LeftColumn>
@@ -26,16 +22,10 @@ const generateColumns = (
         <PlainRightColumnTitle>{third}</PlainRightColumnTitle>
       </RightColumn>
     </div>
-  );
-};
+  )
+}
 
-export const generateAllColumns = (
-  first,
-  second,
-  third,
-  fourth,
-  modifier
-) => {
+export const generateAllColumns = (first, second, third, fourth, modifier) => {
   return (
     <>
       {generateColumns(first, second, third)}
@@ -43,7 +33,7 @@ export const generateAllColumns = (
         {fourth}
       </PlainRightColumnDescription>
     </>
-  );
-};
+  )
+}
 
-export default generateColumns;
+export default generateColumns

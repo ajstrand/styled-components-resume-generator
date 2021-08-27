@@ -4,8 +4,8 @@ import "./example.css"
 export function App(props) {
   const myColors = {
     mainColors:{
-      accentColor:'#33edae',
-      headerPrimaryColor:'#33edae'
+      accentColor:'#33ded',
+      headerPrimaryColor:'#33ed'
     }
   }
   return (
