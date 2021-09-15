@@ -1,7 +1,6 @@
 ;/** @jsx h */
 /** @jsxFrag Fragment */
 
-import { h } from "preact";
 import { generateAllColumns } from "./BuildColumns.jsx";
 import { ExperienceProjectItem } from "./ResumeBodyStyles.jsx";
 

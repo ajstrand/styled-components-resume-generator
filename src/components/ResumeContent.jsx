@@ -1,12 +1,10 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
 
-import {h} from "preact"
+
 import { styled } from '@linaria/react';
 
 import PropTypes from "prop-types";
 import { useTheme } from './Theme';
-
+import { useEffect, useState } from 'preact/hooks';
 import {
   LeftColumn,
   RightColumn,
@@ -51,18 +49,16 @@ const Block = (props) => {
   ) : null;
 };
 
-const Title = styled.h1`
-font-size:40px!important;
-border: 4px solid;
-color: ${props => props.textColor};
-`;
-
 const ResumeContent = (props) => {
   const { config} = props;
   const theme = useTheme()
+  const [localTheme, setData] = useState(theme)
+  useEffect(() => {
+    setData(theme)
+  }, [localTheme])
+
 
   return (
-    // <Title textColor={theme.userColors.pink}>hello</Title>
     <ResumeGridContainer>
       <Header theme={theme} config={config.header} />
       <ResumeBody theme={theme}>
@@ -77,7 +73,7 @@ const ResumeContent = (props) => {
           </RightColumn> */}
         </TwoColumnSection>
       </ResumeBody>
-    </ResumeGridContainer>
+    </ResumeGridContainer>   
   );
 };
 

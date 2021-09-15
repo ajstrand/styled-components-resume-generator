@@ -2,7 +2,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 
-import {h} from "preact"
 const SkillsSection = (props) => {
   const { config } = props;
   const skillsList = config.map((value, index) => {

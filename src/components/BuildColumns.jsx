@@ -1,7 +1,5 @@
 /** @jsx h */
-/** @jsxFrag Fragment */
 
-import { h, Fragment } from 'preact'
 import {
   LeftColumn,
   PlainLeftColumnName,

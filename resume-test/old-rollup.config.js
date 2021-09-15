@@ -7,6 +7,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import url from "@rollup/plugin-url";
 import svgr from "@svgr/rollup";
 import replace from "@rollup/plugin-replace";
+import serve from 'rollup-plugin-serve'
+import copy from 'rollup-plugin-copy'
 
 import pkg from "./package.json";
 
@@ -15,7 +17,7 @@ import alias from "@rollup/plugin-alias";
 import linaria from '@linaria/rollup';
 import css from 'rollup-plugin-css-only';
 
-export default {
+const common = {
   input: "src/StyledResume.jsx",
   output: [
     {
@@ -38,9 +40,8 @@ export default {
       sourceMap: process.env.NODE_ENV !== 'production',
     }),
     css({
-      output: 'styles.css',
+      output: 'resume-styles.css',
     }),
-    //serve('dist'),
     alias({
       entries: [
         { find: "react", replacement: "preact/compat" },
@@ -58,10 +59,70 @@ export default {
       exclude: "./node_modules/**",
       babelHelpers: "bundled",
     }),
-    //added the content js because of
-    // https://github.com/styled-components/styled-components/issues/1654
     commonjs({
       include: "node_modules/**",
     }),
   ],
-};
+}
+
+const prodConfig = {
+  ...common
+
+}
+
+const devConfig = {
+   input: "src/StyledResume.jsx",
+  output: [
+    {
+      file: pkg.main,
+      format: "umd",
+      name: "foobar",
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      format: "esm",
+      sourcemap: true,
+    },
+  ],
+  plugins: [
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+    linaria({
+      sourceMap: process.env.NODE_ENV !== 'production',
+    }),
+    css({
+      output: 'styles.css',
+    }),
+    external(),
+    postcss({
+      modules: true,
+    }),
+    url(),
+    svgr(),
+    resolve(),
+    babel({
+      exclude: "./node_modules/**",
+      babelHelpers: "bundled",
+    }),
+    commonjs({
+      include: "node_modules/**",
+    }),
+    alias({
+      entries: [
+        { find: "react", replacement: "preact/compat" },
+        { find: "react-dom", replacement: "preact/compat" },
+      ],
+    }),
+    copy({
+      targets: [
+        { src: 'template/index.html', dest: 'dist/' },
+      ]
+    }),
+    serve('dist'),
+   
+  ],
+}
+
+export default devConfig;

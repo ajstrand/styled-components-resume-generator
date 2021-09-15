@@ -1,17 +1,21 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 
-import {h} from "preact"
 import styled from "styled-components";
 import myTheme from "./baseTheme";
-import { Section, HeaderCommonStyles } from "./ResumeBodyStyles.jsx";
-const {sizeDefinitions} = myTheme
+import { Section } from "./ResumeBodyStyles.jsx";
+const {sizeDefinitions, mainColors} = myTheme
 import { useTheme } from './Theme';
 
 import { useState, useEffect } from "preact/hooks";
 
 const SectionHeader = styled.div`
-  ${HeaderCommonStyles}
+    font-weight: 600;
+  font-family: "Yantramanav", sans-serif;
+  font-size: ${sizeDefinitions.headerPrimarySize};
+  color: ${mainColors.textPrimaryColor};
+  text-transform: capitalize;
+
   border-bottom: 1px solid;
   font-size: ${sizeDefinitions.headerPrimarySize};
   text-transform: uppercase;

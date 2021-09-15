@@ -1,5 +1,4 @@
 /** @jsx h */
-import { h } from "preact";
 import { useState, useEffect } from "preact/hooks";
 import ResumeContent from "./components/ResumeContent.jsx";
 import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
@@ -10,21 +9,21 @@ import testResumeData from './components/testResumeData';
 
 //TODO: fix me stackoverflow
 const copyColor = (theme, userColors) => {
-  
-  let propsToFind = ["accentColor", "headerPrimaryColor"]
-  for (let key in theme) {
-    let newKey = userColors[key] 
-    let old = theme[key]
-    propsToFind.forEach((el) => {
-      if(old[el] && newKey[el] !== undefined){
-        theme[key][el] = newKey[el]
-      }
-    })
-    
-    
 
-    
+  if(userColors){
+    let propsToFind = ["accentColor", "headerPrimaryColor"]
+    for (let key in theme) {
+      let newKey = userColors[key] 
+      let old = theme[key]
+      propsToFind.forEach((el) => {
+        if(old[el] && newKey[el] !== undefined){
+          theme[key][el] = newKey[el]
+        }
+      }) 
+    }
   }
+  
+
   return theme
 }
 
