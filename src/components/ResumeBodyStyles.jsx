@@ -21,6 +21,9 @@ export const ResumeBody = styled.div`
   grid-column: 1;
   grid-auto-rows: auto;
   grid-gap: ${sizeDefinitions.primarySpacing};
+  @media print {
+    grid-gap: 3px;
+  }
 `;
 
 const Column = styled.div`
@@ -65,7 +68,7 @@ export const LeftColumn = styled(Column)`
 export const RightColumn = styled(Column)`
   flex-basis: auto;
   @media screen and (min-width: 30em) {
-    flex-basis: 100px;
+    flex-basis: 15em;
     flex-grow: 1;
   }
 `;
@@ -133,7 +136,13 @@ export const PlainLeftColumnName = styled(PlainLeftColumn)`
 `;
 
 export const PlainLeftColumnDateRange = styled(PlainLeftColumn)`
-  ${BodyCommonStyles}
+    font-weight: 500;
+  font-family: "Khula", sans-serif;
+  list-style-type: none;
+  color: ${mainColors.textSecondaryColor};
+  @media screen and (min-width: 30em) {
+    list-style-type: circle;
+  }
   text-transform: uppercase;
   font-size: 0.85em;
 `;
@@ -147,14 +156,15 @@ export const PlainRightColumnTitle = styled(PlainRightColumn)`
 `;
 
 export const PlainRightColumnDescription = styled(PlainRightColumn)`
-  ${BodyCommonStyles}
-  @media print {
-    margin: 0!important;
-    line-height: 11px;
-    font-size: 10px!important;
+  font-weight: 500;
+  font-family: "Khula", sans-serif;
+  color: ${mainColors.textSecondaryColor};
+
+  @media screen {
+    li {
+      margin:2px;
+    }
   }
-
-
 `;
 
 export const EducationDetails = styled.div`
@@ -170,4 +180,22 @@ export const EducationDetails = styled.div`
       }
     }
   }
-`
+`;
+
+export const SkillsStyles = styled.span`
+  font-weight: 500;
+  font-family: "Khula", sans-serif;
+  color: ${mainColors.textSecondaryColor};
+   @media print {
+      font-size: 9px;
+      flex-direction: row;
+      display: flex;
+      margin-right: 1em;
+  }
+  @media screen and (max-width:30em) {
+      font-size: 9px;
+      flex-direction: row;
+      display: flex;
+      margin-right: 1em;
+  }
+`;

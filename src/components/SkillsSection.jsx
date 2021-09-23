@@ -2,13 +2,15 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 
+import { SkillsStyles } from "./ResumeBodyStyles";
+
 const SkillsSection = (props) => {
   const { config } = props;
   const skillsList = config.map((value, index) => {
     const nextVal = config[index + 1];
     return nextVal ? value.concat(", ") : value;
   });
-  const jsx = <span className="description">{skillsList}</span>;
+  const jsx = <SkillsStyles>{skillsList}</SkillsStyles>;
   return jsx;
 };
 
