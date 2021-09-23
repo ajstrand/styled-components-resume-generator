@@ -1,4 +1,4 @@
-# resume-test
+# Styled Resume
 
 > styled resume made with made with web technologies
 
@@ -7,20 +7,22 @@
 ## Install
 
 ```bash
-npm install --save resume-test
+npm install --save styled-resume
 ```
 
 ## Usage
 
+//TODO: this section needs updating at some point when project is ready
+
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'resume-test'
-import 'resume-test/dist/index.css'
+import StyledResume from 'styled-resume'
+import 'styled-resume/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <StyledResume/>
   }
 }
 ```
