@@ -1,23 +1,18 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
 
-import styled from "styled-components";
-import myTheme from "./baseTheme";
+import styled from '@emotion/styled'
 import { Section } from "./ResumeBodyStyles.jsx";
-const {sizeDefinitions, mainColors} = myTheme
-import { useTheme } from './Theme';
 
 import { useState, useEffect } from "preact/hooks";
 
 const SectionHeader = styled.div`
     font-weight: 600;
   font-family: "Yantramanav", sans-serif;
-  font-size: ${sizeDefinitions.headerPrimarySize};
-  color: ${mainColors.textPrimaryColor};
+  font-size: var(--headerPrimarySize);
+  color: var(--textPrimaryColor);
   text-transform: capitalize;
 
   border-bottom: 1px solid;
-  font-size: ${sizeDefinitions.headerPrimarySize};
+  font-size: var(--headerPrimarySize);
   text-transform: uppercase;
   color: ${props => props.color};
   margin-bottom: -5px;
@@ -25,17 +20,15 @@ const SectionHeader = styled.div`
 
 const SectionAndHeader = (props) => {
   const { sectionTitle, children} = props;
-  const theme = useTheme()
-
-  const [localTheme, setData] = useState(theme)
 
 
-  useEffect(() => {
-    setData(theme.mainColors)
-  }, [theme])
+
+  // useEffect(() => {
+  //   setData(theme.mainColors)
+  // }, [theme])
   const jsx = (
     <Section>
-      <SectionHeader color={localTheme.accentColor}>{sectionTitle}</SectionHeader>
+      <SectionHeader color={"#ffdffd"}>{sectionTitle}</SectionHeader>
       {children}
     </Section>
   );

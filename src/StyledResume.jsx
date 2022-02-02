@@ -1,10 +1,9 @@
-/** @jsx h */
 import { useState, useEffect } from "preact/hooks";
 import ResumeContent from "./components/ResumeContent.jsx";
 import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
 import PropTypes, { string } from "prop-types";
-import { ThemeProvider, useTheme } from './components/Theme';
-import testResumeData from './components/testResumeData';
+import "./styles/tokens.css"
+//import testResumeData from './components/testResumeData';
 
 
 //TODO: fix me stackoverflow
@@ -29,22 +28,19 @@ const copyColor = (theme, userColors) => {
 
 const StyledResume = (props) => {
   const { config, userColors } = props;
-  let theme = useTheme()
-  const [localTheme, setTheme] = useState(theme)
-  const [data, setData] = useState(testResumeData);
+  const [localTheme, setTheme] = useState(props.userColors)
+  const [data, setData] = useState(defaultResumeDataObj);
 
   useEffect(() => {
     setData(config ? config : data);
 // let's copy all user properties into it
-    let res = copyColor(theme, userColors)
-    setTheme(res)
+    //let res = copyColor(theme, userColors)
+    //setTheme(res)
 
   }, [localTheme]);
 
   return (
-    <ThemeProvider theme={localTheme}>
     <ResumeContent config={data} userColors={localTheme} />
-    </ThemeProvider>
   );
 };
 

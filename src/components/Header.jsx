@@ -1,10 +1,7 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { styled } from '@linaria/react'
+
+import styled from '@emotion/styled'
 import { BodyCommonStyles } from './ResumeBodyStyles.jsx'
 import { useState, useEffect } from 'preact/hooks'
-import myTheme from "./baseTheme";
-const {sizeDefinitions, mainColors} = myTheme
 
 
 export const Description = styled.p`
@@ -24,11 +21,11 @@ export const ContactName = styled.span`
     color: white;
   @media screen and (min-width: 30em) {
     padding-top: unset;
-    font-size: ${sizeDefinitions.headerPrimarySize};
+    font-size: var(--headerPrimarySize);
     font-size: 2em;
   }
   @media print {
-    font-size: ${sizeDefinitions.headerPrimarySize};
+    font-size: var(--headerPrimarySize);
     font-size: 1em;
   }
 `
@@ -59,13 +56,13 @@ export const ContactDetailsAnchorTag = styled.a`
 
 const HeaderBase = styled.header`
   font-family: "Yantramanav", sans-serif; 
-  font-size: ${sizeDefinitions.headerPrimarySize};
+  font-size: var(--headerPrimarySize);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.color};
+  background-color:var(--accentColor);
   height: fit-content;
   padding: 1em;
   @media screen and (min-width: 30em) {
@@ -112,7 +109,7 @@ const Header = (props) => {
       )
     })
     content = (
-      <HeaderBase color={localTheme.headerPrimaryColor}>
+      <HeaderBase>
         <ContactName>{name}</ContactName>
         <ContactDetails>{DetailsList}</ContactDetails>
       </HeaderBase>

@@ -1,10 +1,9 @@
+import { h } from "preact"
 
-
-import { styled } from '@linaria/react';
+import styled from '@emotion/styled'
 
 import PropTypes from "prop-types";
-import { useTheme } from './Theme';
-import { useEffect, useState } from 'preact/hooks';
+import {  useState } from 'preact/hooks';
 import {
   LeftColumn,
   RightColumn,
@@ -51,25 +50,21 @@ const Block = (props) => {
 
 const ResumeContent = (props) => {
   const { config} = props;
-  const theme = useTheme()
-  const [localTheme, setData] = useState(theme)
-  useEffect(() => {
-    setData(theme)
-  }, [localTheme])
+  const [localTheme, setData] = useState(props.userColors)
 
 
   return (
     <ResumeGridContainer>
-      <Header theme={theme} config={config.header} />
-      <ResumeBody theme={theme}>
-        <Block theme={theme} componentType="experience" config={config} />
-        <Block theme={theme} componentType="projects" config={config} />
+      <Header theme={localTheme} config={config.header} />
+      <ResumeBody>
+        <Block theme={localTheme} componentType="experience" config={config} />
+        <Block theme={localTheme} componentType="projects" config={config} />
         <TwoColumnSection>
           <LeftColumn>
-            <Block theme={theme} componentType="education" config={config} />
+            <Block theme={localTheme} componentType="education" config={config} />
           </LeftColumn>
           <RightColumn>
-            <Block theme={theme} componentType="skills" config={config} />
+            <Block componentType="skills" config={config} />
           </RightColumn>
         </TwoColumnSection>
       </ResumeBody>

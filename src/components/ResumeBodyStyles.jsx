@@ -1,8 +1,5 @@
-import { styled} from '@linaria/react';
-import { css } from '@linaria/core';
-import myTheme from "./baseTheme.js";
-
-const {sizeDefinitions, mainColors} = myTheme
+import styled from '@emotion/styled'
+import {css} from "@emotion/css";
 
 
 export const BodyCommonStyles = css`
@@ -10,7 +7,7 @@ export const BodyCommonStyles = css`
   font-family: "Khula", sans-serif;
   list-style-type: none;
   font-size: 0.95em;
-  color: ${mainColors.textSecondaryColor};
+  color: var(--textSecondaryColor);
   @media screen and (min-width: 30em) {
     list-style-type: circle;
   }
@@ -20,7 +17,7 @@ export const ResumeBody = styled.div`
   display: grid;
   grid-column: 1;
   grid-auto-rows: auto;
-  grid-gap: ${sizeDefinitions.primarySpacing};
+  grid-gap: var(--primarySpacing);
   @media print {
     grid-gap: 3px;
   }
@@ -76,14 +73,10 @@ export const RightColumn = styled(Column)`
 export const Section = styled.div`
   grid-auto-rows: min-content;
   display: grid;
-  grid-gap: ${sizeDefinitions.smallSpacing};
+  grid-gap: var(--smallSpacing);
 `;
 
-const ExperienceProjectSectionCommonStyles = css`
-  display: grid;
-  grid-auto-rows: auto;
-  grid-gap: ${sizeDefinitions.smallSpacing};
-`;
+
 export const ExperienceProjectSection = styled.div`
    display: flex;
   flex-direction: column;
@@ -92,7 +85,7 @@ export const ExperienceProjectSection = styled.div`
   @media screen and (min-width: 30em) {
     display: grid;
     grid-template-areas: "title description";
-    grid-gap: ${sizeDefinitions.primarySpacing};
+    grid-gap: var(--primarySpacing);
     grid-template-columns: minmax(auto, 135px) 1fr;
   }
   @media print {
@@ -110,7 +103,7 @@ export const ExperienceProjectItem = styled.div`
   @media screen and (min-width: 30em) {
     display: grid;
     grid-template-areas: "title description";
-    grid-gap: ${sizeDefinitions.primarySpacing};
+    grid-gap: var(--primarySpacing);
     grid-template-columns: minmax(auto, 135px) 1fr;
   }
   @media print {
@@ -130,8 +123,8 @@ export const ExperienceProjectItem = styled.div`
 export const PlainLeftColumnName = styled(PlainLeftColumn)`
     font-weight: 600;
   font-family: "Yantramanav", sans-serif;
-  font-size: ${sizeDefinitions.headerPrimarySize};
-  color: ${mainColors.textPrimaryColor};
+  font-size: var(--headerPrimarySize);
+  color: var(--textPrimaryColor);
   text-transform: capitalize;
 `;
 
@@ -139,7 +132,7 @@ export const PlainLeftColumnDateRange = styled(PlainLeftColumn)`
     font-weight: 500;
   font-family: "Khula", sans-serif;
   list-style-type: none;
-  color: ${mainColors.textSecondaryColor};
+  color: var(--textSecondaryColor);
   @media screen and (min-width: 30em) {
     list-style-type: circle;
   }
@@ -150,15 +143,15 @@ export const PlainLeftColumnDateRange = styled(PlainLeftColumn)`
 export const PlainRightColumnTitle = styled(PlainRightColumn)`
   font-weight: 600;
   font-family: "Yantramanav", sans-serif;
-  font-size: ${sizeDefinitions.headerPrimarySize};
-  color: ${mainColors.textPrimaryColor};
+  font-size: var(--headerPrimarySize);
+  color: var(--textPrimaryColor);
   text-transform: capitalize;
 `;
 
 export const PlainRightColumnDescription = styled(PlainRightColumn)`
   font-weight: 500;
   font-family: "Khula", sans-serif;
-  color: ${mainColors.textSecondaryColor};
+  color: var(--textSecondaryColor);
 
   @media screen {
     li {
@@ -185,7 +178,7 @@ export const EducationDetails = styled.div`
 export const SkillsStyles = styled.span`
   font-weight: 500;
   font-family: "Khula", sans-serif;
-  color: ${mainColors.textSecondaryColor};
+  color: var(--textSecondaryColor);
    @media print {
       font-size: 9px;
       flex-direction: row;

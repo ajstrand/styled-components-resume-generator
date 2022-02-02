@@ -1,5 +1,5 @@
-;/** @jsx h */
-/** @jsxFrag Fragment */
+import { h } from "preact"
+
 
 import generateColumns from "./BuildColumns.jsx";
 import { EducationDetails } from "./ResumeBodyStyles.jsx";

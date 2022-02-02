@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-/** @jsx h */
-/** @jsxFrag Fragment */
+
 
 import { SkillsStyles } from "./ResumeBodyStyles";
 
