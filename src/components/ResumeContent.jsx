@@ -1,79 +1,82 @@
-import { h } from "preact"
+import { h } from 'preact'
 
 import styled from '@emotion/styled'
 
-import PropTypes from "prop-types";
-import {  useState } from 'preact/hooks';
+import PropTypes from 'prop-types'
+import { useState } from 'preact/hooks'
 import {
   LeftColumn,
   RightColumn,
   TwoColumnSection,
-  ResumeBody,
-} from "./ResumeBodyStyles.jsx";
+  ResumeBody
+} from './ResumeBodyStyles.jsx'
 
-import Header from "./Header.jsx"
+import Header from './Header.jsx'
 
-import ProjectsSection from "./ProjectsSection.jsx";
-import SkillsSection from "./SkillsSection.jsx";
-import EducationSection from "./EducationSection.jsx";
-import ExperienceSection from "./ExperienceSection.jsx";
-import SectionAndHeader from "./SectionHeader.jsx";
+import ProjectsSection from './ProjectsSection.jsx'
+import SkillsSection from './SkillsSection.jsx'
+import EducationSection from './EducationSection.jsx'
+import ExperienceSection from './ExperienceSection.jsx'
+import SectionAndHeader from './SectionHeader.jsx'
 
 const ResumeGridContainer = styled.div`
-height: 100%;
+  height: 100%;
   background-color: #ffffff;
   display: grid;
-  width: ${(props) =>
-    props.resumeWidth ? props.resumeWidth : "100%"};
+  width: ${(props) => (props.resumeWidth ? props.resumeWidth : '100%')};
   @media print {
     width: 100%;
   }
-`;
+`
 const Block = (props) => {
-  const { componentType, config, theme } = props;
+  const { componentType, config, theme } = props
   const components = {
     experience: ExperienceSection,
     projects: ProjectsSection,
     education: EducationSection,
-    skills: SkillsSection,
-  };
-  const Tag = components[componentType];
-  const resumeDataToRender = config[componentType];
-  const dataExists =
-    !!(resumeDataToRender !== null && resumeDataToRender !== undefined);
+    skills: SkillsSection
+  }
+  const Tag = components[componentType]
+  const resumeDataToRender = config[componentType]
+  const dataExists = !!(
+    resumeDataToRender !== null && resumeDataToRender !== undefined
+  )
   return Tag && dataExists ? (
     <SectionAndHeader theme={theme} sectionTitle={componentType}>
       <Tag theme={theme} config={resumeDataToRender} />
     </SectionAndHeader>
-  ) : null;
-};
+  ) : null
+}
 
 const ResumeContent = (props) => {
-  const { config} = props;
+  const { config } = props
   const [localTheme, setData] = useState(props.userColors)
-
 
   return (
     <ResumeGridContainer>
       <Header theme={localTheme} config={config.header} />
       <ResumeBody>
-        <Block theme={localTheme} componentType="experience" config={config} />
-        <Block theme={localTheme} componentType="projects" config={config} />
+        <Block theme={localTheme} componentType='experience' config={config} />
+        <Block theme={localTheme} componentType='projects' config={config} />
         <TwoColumnSection>
           <LeftColumn>
-            <Block theme={localTheme} componentType="education" config={config} />
+            <Block
+              theme={localTheme}
+              componentType='education'
+              config={config}
+            />
           </LeftColumn>
-          <RightColumn>
+          {/* <RightColumn>
             <Block componentType="skills" config={config} />
-          </RightColumn>
+          </RightColumn> */}
         </TwoColumnSection>
       </ResumeBody>
-    </ResumeGridContainer>   
-  );
-};
+    </ResumeGridContainer>
+  )
+}
 
 ResumeContent.propTypes = {
-  config: PropTypes.object,
-};
+  config: PropTypes.object
+}
 
-export default ResumeContent;
+export default ResumeContent

@@ -1,28 +1,29 @@
-import { h } from "preact"
-
-
-import generateColumns from "./BuildColumns.jsx";
-import { EducationDetails } from "./ResumeBodyStyles.jsx";
+import { h } from 'preact'
+import generateColumns from './BuildColumns.jsx'
+import { EducationDetails } from './ResumeBodyStyles.jsx'
 const EducationSection = (props) => {
-  const { config } = props;
-  let data;
+  const { config } = props
+  let data
 
   const list = config.map((section) => {
     data = {
       name: section.name,
       date: section.dateRange,
-      program: section.programOrDegree,
-    };
+      program: section.programOrDegree
+    }
 
-    const { name, date, program } = data;
+    const { name, date, program } = data
 
     return (
       <EducationDetails key={section.toString()}>
-        {generateColumns(name, date, program)}
+        {/* {generateColumns(name, date, program)} */}
+        <span>{name}</span>
+        <span>{program}</span>
+        <span>{date}</span>
       </EducationDetails>
-    );
-  });
-  return list;
-};
+    )
+  })
+  return list
+}
 
-export default EducationSection;
+export default EducationSection

@@ -1,4 +1,4 @@
-import { h } from "preact"
+import { h } from 'preact'
 
 import {
   LeftColumn,
@@ -27,7 +27,10 @@ export const generateAllColumns = (first, second, third, fourth, modifier) => {
   return (
     <>
       {generateColumns(first, second, third)}
-      <PlainRightColumnDescription as={modifier ? modifier : null}>
+      <PlainRightColumnDescription
+        className='list'
+        as={modifier ? modifier : null}
+      >
         {fourth}
       </PlainRightColumnDescription>
     </>

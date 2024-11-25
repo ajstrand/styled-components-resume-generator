@@ -1,8 +1,6 @@
-
 import styled from '@emotion/styled'
 import { BodyCommonStyles } from './ResumeBodyStyles.jsx'
 import { useState, useEffect } from 'preact/hooks'
-
 
 export const Description = styled.p`
   ${BodyCommonStyles}
@@ -15,10 +13,10 @@ export const Description = styled.p`
 // `;
 
 export const ContactName = styled.span`
-    text-transform: capitalize;
-    font-family: 'Yantramanav', sans-serif;
-    font-weight: 600;
-    color: white;
+  text-transform: capitalize;
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 600;
+  color: white;
   @media screen and (min-width: 30em) {
     padding-top: unset;
     font-size: var(--headerPrimarySize);
@@ -55,14 +53,14 @@ export const ContactDetailsAnchorTag = styled.a`
 `
 
 const HeaderBase = styled.header`
-  font-family: "Yantramanav", sans-serif; 
+  font-family: 'Yantramanav', sans-serif;
   font-size: var(--headerPrimarySize);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:var(--accentColor);
+  background-color: var(--accentColor);
   height: fit-content;
   padding: 1em;
   @media screen and (min-width: 30em) {
@@ -72,7 +70,7 @@ const HeaderBase = styled.header`
     justify-content: space-between;
   }
   @media print {
-    height: 3em;
+    height: 10px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -87,7 +85,7 @@ const Header = (props) => {
   const [localTheme, setData] = useState(theme)
 
   useEffect(() => {
-    let {mainColors} = theme
+    let { mainColors } = theme
     setData(mainColors)
   }, [theme])
 

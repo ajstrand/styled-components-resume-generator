@@ -1,48 +1,42 @@
-import { useState, useEffect } from "preact/hooks";
-import ResumeContent from "./components/ResumeContent.jsx";
-import defaultResumeDataObj from "./components/defaultResumeDataTemplate";
-import PropTypes, { string } from "prop-types";
-import "./styles/tokens.css"
-//import testResumeData from './components/testResumeData';
-
+import { useState, useEffect } from 'preact/hooks'
+import ResumeContent from './components/ResumeContent.jsx'
+//import defaultResumeDataObj from './components/defaultResumeDataTemplate'
+import defaultResumeDataObj from './components/myResumeData'
+import PropTypes, { string } from 'prop-types'
+import './styles/tokens.css'
 
 //TODO: fix me stackoverflow
 const copyColor = (theme, userColors) => {
-
-  if(userColors){
-    let propsToFind = ["accentColor", "headerPrimaryColor"]
+  if (userColors) {
+    let propsToFind = ['accentColor', 'headerPrimaryColor']
     for (let key in theme) {
-      let newKey = userColors[key] 
+      let newKey = userColors[key]
       let old = theme[key]
       propsToFind.forEach((el) => {
-        if(old[el] && newKey[el] !== undefined){
+        if (old[el] && newKey[el] !== undefined) {
           theme[key][el] = newKey[el]
         }
-      }) 
+      })
     }
   }
-  
 
   return theme
 }
 
 const StyledResume = (props) => {
-  const { config, userColors } = props;
+  const { config, userColors } = props
   const [localTheme, setTheme] = useState(props.userColors)
-  const [data, setData] = useState(defaultResumeDataObj);
+  const [data, setData] = useState(defaultResumeDataObj)
 
   useEffect(() => {
-    setData(config ? config : data);
-// let's copy all user properties into it
+    setData(config ? config : data)
+    // let's copy all user properties into it
     //let res = copyColor(theme, userColors)
     //setTheme(res)
+  }, [localTheme])
 
-  }, [localTheme]);
-
-  return (
-    <ResumeContent config={data} userColors={localTheme} />
-  );
-};
+  return <ResumeContent config={data} userColors={localTheme} />
+}
 
 StyledResume.propTypes = {
   config: PropTypes.shape({
@@ -51,7 +45,7 @@ StyledResume.propTypes = {
       site: PropTypes.string,
       emailLinkValue: PropTypes.string.isRequired,
       emailLabel: PropTypes.string.isRequired,
-      phone: PropTypes.string,
+      phone: PropTypes.string
     }),
     //TODO: support various education types in props
     education: PropTypes.arrayOf(
@@ -59,13 +53,13 @@ StyledResume.propTypes = {
         college: PropTypes.shape({
           name: PropTypes.string,
           programOrDegree: PropTypes.string,
-          dateRange: PropTypes.string,
+          dateRange: PropTypes.string
         }),
         bootcamp: PropTypes.shape({
           name: PropTypes.string,
           programOrDegree: PropTypes.string,
-          dateRange: PropTypes.string,
-        }),
+          dateRange: PropTypes.string
+        })
       })
     ),
     experience: PropTypes.arrayOf(
@@ -75,20 +69,20 @@ StyledResume.propTypes = {
         jobTitle: PropTypes.string.isRequired,
         jobDescription: PropTypes.arrayOf(
           PropTypes.shape({
-            text: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired
           })
-        ),
+        )
       })
     ),
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         dateRange: PropTypes.string,
         title: PropTypes.string,
-        desc: PropTypes.string,
+        desc: PropTypes.string
       })
     ),
-    skills: PropTypes.arrayOf(string),
-  }),
-};
+    skills: PropTypes.arrayOf(string)
+  })
+}
 
-export default StyledResume;
+export default StyledResume

@@ -1,38 +1,36 @@
-
 import styled from '@emotion/styled'
-import { Section } from "./ResumeBodyStyles.jsx";
+import { Section } from './ResumeBodyStyles.jsx'
 
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from 'preact/hooks'
 
 const SectionHeader = styled.div`
-    font-weight: 600;
-  font-family: "Yantramanav", sans-serif;
+  font-weight: 600;
+  font-family: 'Yantramanav', sans-serif;
   font-size: var(--headerPrimarySize);
-  color: var(--textPrimaryColor);
+  //color: var(--textPrimaryColor);
+  color: #000000;
+
   text-transform: capitalize;
 
   border-bottom: 1px solid;
   font-size: var(--headerPrimarySize);
-  text-transform: uppercase;
-  color: ${props => props.color};
+  //text-transform: uppercase;
   margin-bottom: -5px;
-`;
+`
 
 const SectionAndHeader = (props) => {
-  const { sectionTitle, children} = props;
-
-
+  const { sectionTitle, children } = props
 
   // useEffect(() => {
   //   setData(theme.mainColors)
   // }, [theme])
   const jsx = (
     <Section>
-      <SectionHeader color={"#ffdffd"}>{sectionTitle}</SectionHeader>
+      <SectionHeader color={'#ffdffd'}>{sectionTitle}</SectionHeader>
       {children}
     </Section>
-  );
-  return jsx;
-};
+  )
+  return jsx
+}
 
-export default SectionAndHeader;
+export default SectionAndHeader

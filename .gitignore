@@ -26,6 +26,7 @@ yarn-error.log*
 *.log
 
 src/components/testResumeData.js
+src/components/myResumeData.js
 
 ../.DS_Store
 
